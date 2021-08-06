@@ -1,0 +1,234 @@
+﻿
+@{
+    ViewData["Title"] = "AJWDailyPlanList";
+    Layout = "~/Views/Shared/_LayoutDms.cshtml";
+}
+
+
+@*this code is for language transalator inject localizer--------------*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@*this code is for language transalator inject localizer--------------*@
+
+<style></style>
+
+<body>
+    <div class="container-fluid backgroundWhiteBorder10Padding">
+        <div class="row">
+            <div class="header col-sm-12">
+                <a class="logo font-weight-bold font-weight-bolder">@Localizer["AJW Daily Plan D.M.S"]</a>
+            </div>
+  
+            @*-----------1-------------start---------------------------- Table for Daily Plan Office DMS List----------------------------------------------------------*@
+
+            <form class="tabled col-sm-12" style="font-family:'Jameel Noori Nastaleeq';font-size:x-large">
+                <hr />
+                <div class="col-sm-12 text-center">
+                    <a class=" text-black" scope="col" colspan="10" style="font-family:'Jameel Noori Nastaleeq';font-size:xx-large">@Localizer["Daily Plan D.M.S"]</a>
+                </div>
+                <br />
+                <table class="table table-bordered" id="DARReport">
+                    <thead>
+                        <tr>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Action"] </th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Date"]</th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Title"]</th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["ID#"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <tr>
+                            <td scope="row" style="width:150px;text-align:center" class="bg-secondary">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @Localizer["Action"]
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> @Localizer["View"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> @Localizer["Edit"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> @Localizer["Delete"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-upload"></i> @Localizer["Upload to Repository"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-upload"></i> @Localizer["Upload to DMS"]</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <th class="text-center  text-dark" scope="col"></th>
+                            <th class="text-center  text-dark" scope="col">@Localizer["AJW Daily Plan Pdf"] </th>
+                            <th class="text-center  text-dark" scope="col"></th>
+                        </tr>
+
+                    </tbody>
+                </table>
+                @*------------------------start---------------------------- Table for Monthly Daily Plan  List----------------------------------------------------------*@
+
+                <hr />
+                <div class="col-sm-12 text-center">
+                    <a class=" text-black" scope="col" colspan="10" style="font-family:'Jameel Noori Nastaleeq';font-size:xx-large">@Localizer["Monthly Plan D.M.S"]</a>
+                </div>
+                <br />
+                <table class="table table-bordered" id="MARReport">
+                    <thead>
+                        <tr>
+
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Action"] </th>
+
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Date"]</th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Title"]</th>
+
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["ID#"]</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @*@foreach (var item in Model)
+                            {*@
+
+                        <tr>
+                            <td scope="row" style="width:150px;text-align:center" class="bg-secondary">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @Localizer["Action"]
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> @Localizer["View"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> @Localizer["Edit"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> @Localizer["Delete"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-upload"></i> @Localizer["Upload to Repository"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-upload"></i> @Localizer["Upload to DMS"]</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <th class="text-center  text-dark" scope="col"></th>
+                            <th class="text-center  text-dark" scope="col">@Localizer["AJW Monthly Plan Pdf"] </th>
+                            <th class="text-center  text-dark" scope="col"></th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                @*------------------------ended---------------------------- Table for Monthly Plan  List----------------------------------------------------------*@
+
+
+                @*------------------------start---------------------------- Table for Yearly Plan D.M.S  List----------------------------------------------------------*@
+
+                <hr />
+                <div class="col-sm-12 text-center">
+                    <a class=" text-black" scope="col" colspan="10" style="font-family:'Jameel Noori Nastaleeq';font-size:xx-large">@Localizer["Yearly Plan D.M.S"]</a>
+                </div>
+                <br />
+                <table class="table table-bordered" id="YARReport">
+                    <thead>
+                        <tr>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Action"] </th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Date"]</th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["Title"]</th>
+                            <th class="text-center bg-secondary text-white" scope="col">@Localizer["ID#"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @*@foreach (var item in Model)
+                            {*@
+
+                        <tr>
+                            <td scope="row" style="width:150px;text-align:center" class="bg-secondary">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @Localizer["Action"]
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> @Localizer["View"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> @Localizer["Edit"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> @Localizer["Delete"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-upload"></i> @Localizer["Upload to Repository"]</a>
+                                        <a style="font-size:medium" class="dropdown-item font-weight-bold" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-upload"></i> @Localizer["Upload to DMS"]</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center  text-dark" scope="col"></td>
+                            <td class="text-center  text-dark" scope="col">@Localizer["AJW Yearly Plan Pdf"] </td>
+                            <td class="text-center  text-dark" scope="col"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                @*------------------------ended---------------------------- Table for Yearly Plan D.M.S  List----------------------------------------------------------*@
+            </form>
+
+
+        </div>
+    </div>
+</body>
+<style>
+    .header {
+        overflow: hidden;
+        padding: 10px 10px;
+        font-size: 40px;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+
+    .signt {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*  margin-left: -120px;*/
+    }
+</style>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#DARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#MARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#YARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#AARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

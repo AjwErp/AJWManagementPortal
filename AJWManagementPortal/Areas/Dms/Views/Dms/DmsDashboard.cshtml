@@ -1,0 +1,208 @@
+﻿@*this code is for language transalator inject localizer--------------*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@*this code is for language transalator inject localizer--------------*@
+@{
+    ViewData["Title"] = "DMSDashboard";
+    Layout = "~/Views/Shared/_LayoutDms.cshtml";
+}
+
+<style></style>
+<br />
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-blue">
+                    <div class="inner">
+                        <h3> 134367577 </h3>
+                        <p> @Localizer["Total Income"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-green">
+                    <div class="inner">
+                        <h3> ₹1858388358 </h3>
+                        <p> @Localizer["Today Income"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> 583838464 </h3>
+                        <p> @Localizer["Total Expense"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 7283838383 </h3>
+                        <p> @Localizer["Today Expence"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-blue">
+                    <div class="inner">
+                        <h3> 134367577 </h3>
+                        <p> @Localizer["Today Opening Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-green">
+                    <div class="inner">
+                        <h3> ₹1858388358 </h3>
+                        <p> @Localizer["Meezan-Bank Current Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> 583838464 </h3>
+                        <p> @Localizer["Punjab-Bank Current Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 7283838383 </h3>
+                        <p> @Localizer["Total Bank Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-blue">
+                    <div class="inner">
+                        <h3> 134367577 </h3>
+                        <p> @Localizer["Total Accounts Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-green">
+                    <div class="inner">
+                        <h3> ₹1858388358 </h3>
+                        <p> @Localizer["Internal Account Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> 583838464 </h3>
+                        <p> @Localizer["Petty Account Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 7283838383 </h3>
+                        <p> @Localizer["Supplier Credit Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-blue">
+                    <div class="inner">
+                        <h3> 134367577 </h3>
+                        <p> @Localizer["Suplier Debit Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-green">
+                    <div class="inner">
+                        <h3> ₹1858388358 </h3>
+                        <p> @Localizer["Today Meezan Bank Income"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> 583838464 </h3>
+                        <p> @Localizer["Today Punjab Bank Income"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 7283838383 </h3>
+                        <p> @Localizer["Supplier -- Balance"] </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-money"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

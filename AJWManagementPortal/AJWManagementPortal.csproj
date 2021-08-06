@@ -1,0 +1,145 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-AJWManagementPortal-EC09667F-3518-4B07-A386-2A369A59426B</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\startbootstrap-sb-admin-2-gh-pages\**" />
+    <Compile Remove="wwwroot\startmin-master\**" />
+    <Content Remove="wwwroot\startbootstrap-sb-admin-2-gh-pages\**" />
+    <Content Remove="wwwroot\startmin-master\**" />
+    <EmbeddedResource Remove="wwwroot\startbootstrap-sb-admin-2-gh-pages\**" />
+    <EmbeddedResource Remove="wwwroot\startmin-master\**" />
+    <None Remove="wwwroot\startbootstrap-sb-admin-2-gh-pages\**" />
+    <None Remove="wwwroot\startmin-master\**" />
+    <TypeScriptCompile Remove="wwwroot\startbootstrap-sb-admin-2-gh-pages\**" />
+    <TypeScriptCompile Remove="wwwroot\startmin-master\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20210331111731_AddDailyPlanOutAccountToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210331111731_AddDailyPlanOutAccountToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210331112155_AddDailyPlanOutAccountToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210331112155_AddDailyPlanOutAccountToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210402061428_AddDailyPlanInAccountToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210402061428_AddDailyPlanInAccountToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210402061916_AddDailyPlanInAccountsToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210402061916_AddDailyPlanInAccountsToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210423065933_AddFieldToIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20210423065933_AddFieldToIdentityUser.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210423070815_AddMoreFields2ToIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20210423070815_AddMoreFields2ToIdentityUser.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210423071353_AddProfilePictureToIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20210423071353_AddProfilePictureToIdentityUser.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210429041150_AddDailyContinueSheetMsToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210429041150_AddDailyContinueSheetMsToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505051007_AddNoticbToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210505051007_AddNoticbToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505061022_AddNoticbToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210505061022_AddNoticbToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505063053_AddNoticbToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210505063053_AddNoticbToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505063150_AddNoticbToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210505063150_AddNoticbToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505103525_AddProfilePictureToIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20210505103525_AddProfilePictureToIdentityUser.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505103641_AddNewFieldToIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20210505103641_AddNewFieldToIdentityUser.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505105331_AddMoreFieldssToDatabase.cs" />
+    <Compile Remove="Data\Migrations\20210505105331_AddMoreFieldssToDatabase.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210505105426_AddMoreFieldssToIdentityUser.cs" />
+    <Compile Remove="Data\Migrations\20210505105426_AddMoreFieldssToIdentityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.13" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.2.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Accessory\Data\" />
+    <Folder Include="Areas\Accessory\Models\" />
+    <Folder Include="Areas\Account\Data\" />
+    <Folder Include="Areas\Account\Models\" />
+    <Folder Include="Areas\Dgm\Data\" />
+    <Folder Include="Areas\Dgm\Models\" />
+    <Folder Include="Areas\Dms\Data\" />
+    <Folder Include="Areas\Dms\Models\" />
+    <Folder Include="Areas\Employee\Controllers\" />
+    <Folder Include="Areas\Employee\Data\" />
+    <Folder Include="Areas\Employee\Models\" />
+    <Folder Include="Areas\Gm\Data\" />
+    <Folder Include="Areas\Gm\Models\" />
+    <Folder Include="Areas\Home\Data\" />
+    <Folder Include="Areas\Home\Models\" />
+    <Folder Include="Areas\HRM\Data\" />
+    <Folder Include="Areas\HRM\Models\" />
+    <Folder Include="Areas\Maintenance\Data\" />
+    <Folder Include="Areas\Maintenance\Models\" />
+    <Folder Include="Areas\Meeting\Data\" />
+    <Folder Include="Areas\Meeting\Models\" />
+    <Folder Include="Areas\Production\Data\" />
+    <Folder Include="Areas\Production\Models\" />
+    <Folder Include="Areas\Purchase\Data\" />
+    <Folder Include="Areas\Purchase\Models\" />
+    <Folder Include="Areas\Sale\Data\" />
+    <Folder Include="Areas\Sale\Models\" />
+    <Folder Include="Areas\Security\Data\" />
+    <Folder Include="Areas\Security\Models\" />
+    <Folder Include="Areas\Sheets\Controllers\" />
+    <Folder Include="Areas\Sheets\Data\" />
+    <Folder Include="Areas\Sheets\Models\" />
+    <Folder Include="Areas\Sheets\Views\" />
+    <Folder Include="Areas\Store\Data\" />
+    <Folder Include="Areas\Store\Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Resources\Areas\Production\Views\Production\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\AccountsLayout.css" />
+    <None Include="wwwroot\css\AdminLayout.css" />
+    <None Include="wwwroot\css\CeoLayout.css" />
+    <None Include="wwwroot\css\DgmLayout.css" />
+    <None Include="wwwroot\css\DmsLayout.css" />
+    <None Include="wwwroot\css\GmLayout.css" />
+    <None Include="wwwroot\css\HrmLayout.css" />
+    <None Include="wwwroot\css\Layout.css" />
+    <None Include="wwwroot\css\ProductionLayout.css" />
+    <None Include="wwwroot\css\site.css" />
+    <None Include="wwwroot\srtdash\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\srtdash\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\srtdash\assets\fonts\themify.svg" />
+    <None Include="wwwroot\srtdash\assets\images\icon\market-value\Thumbs.db" />
+    <None Include="wwwroot\srtdash\assets\images\icon\Thumbs.db" />
+    <None Include="wwwroot\srtdash\assets\js\bar-chart.js" />
+    <None Include="wwwroot\srtdash\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\jquery.slicknav.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\jquery.slimscroll.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\line-chart.js" />
+    <None Include="wwwroot\srtdash\assets\js\maps.js" />
+    <None Include="wwwroot\srtdash\assets\js\metisMenu.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\owl.carousel.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\pie-chart.js" />
+    <None Include="wwwroot\srtdash\assets\js\plugins.js" />
+    <None Include="wwwroot\srtdash\assets\js\popper.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\scripts.js" />
+    <None Include="wwwroot\srtdash\assets\js\vendor\jquery-2.2.4.min.js" />
+    <None Include="wwwroot\srtdash\assets\js\vendor\modernizr-2.8.3.min.js" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,212 @@
+﻿
+@{
+    ViewData["Title"] = "AJWDailyPlanIOList";
+    Layout = "~/Views/Shared/_LayoutProduction.cshtml";
+}
+
+@model IEnumerable<AJWDailyPlanIO>
+@*this code is for language transalator inject localizer--------------*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@*this code is for language transalator inject localizer--------------*@
+
+@*<br />
+    <body>
+        <div class="border backgroundWhite backgroundWhiteBorder10Padding">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="~/Image/1.png" alt="Image" width="100" height="100" />
+                    <h2 class="titleAccountofficeReport">@Localizer["Daily Plan-In/Out Sheet -  Admin Office"]</h2>
+                    <div class="text-left font-weight-bold"> 14-06-2021  : @Localizer["Date"]</div>
+                </div>
+            </div>
+            <div class="row text-light">
+                <div class="col-12 text-right">
+
+                    <partial name="_CreateButtonPartialAJWDPIO" />
+                </div>
+            </div>
+            <br />
+            <div>
+                @if (Model.Count() > 0)
+                {
+                    <table id="table" class="table table-striped border SubH">
+                        <thead>
+                            <tr class=" bg-dark text-white Subhdr">
+                                <th>
+                                    @Localizer["ID#"]
+                                </th>
+                                <th>
+                                    @Localizer["Name"]
+                                </th>
+                                <th>
+                                    @Localizer["Designation"]
+                                </th>
+                                <th>
+                                    @Localizer["DateTimeIn"]
+                                </th>
+                                <th>
+                                    @Localizer["DateTimeOut"]
+                                </th>
+                                <th>
+                                    @Localizer["Description"]
+                                </th>
+                                <th>
+                                    @Localizer["Signature"]
+                                </th>
+                                <th> </th>
+                                <th> @Localizer["Action"]</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Designation)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.DateTimeIn)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.DateTimeOut)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Signature)
+                                    </td>
+                                    <td>
+                                        <partial name="_TableButtonPartialAJWDPIO" model="item.Id" />
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>@Localizer["No Daily Plan Exist..."]</p>
+                }
+            </div>
+
+        </div>
+    </body>
+    <br />*@
+
+
+
+<br />
+<body>
+
+    <div class="border backgroundWhite backgroundWhiteBorder10Padding">
+        <div class="row  text-light">
+            <div class="col-12 text-right">
+                @*<partial name="_CreateButtonPartialAJWDPIO" />*@
+                <a asp-action="AJWDailyPlanIO" class="btn btn-primary"><i class="fas fa-plus"></i> &nbsp;@Localizer["Create New Daily Plan-In"]  </a>
+
+                @*<a asp-action="Create" class="btn btn-primary"><i class="fas fa-plus"></i> &nbsp;@Localizer["Create New Notice"] </a>*@
+                <button class="btn btn-theme btn-print text-right " onclick="myFunction()"> Print <i class="fa fa-print" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="~/Image/1.png" alt="Image" width="100" height="100" />
+                <h2 class="titleAccountofficeReport"> @Localizer["Daily Plan-In/Out Sheet -  Admin Office"]</h2>
+            </div>
+        </div>
+
+        <div>
+            <div class="table-responsive-lg">
+                @if (Model.Count() > 0)
+                {
+                    <table id="table" class="table table-striped border SubH">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Localizer["ID#"]
+                                </th>
+                                <th>
+                                    @Localizer["Name"]
+                                </th>
+                                <th>
+                                    @Localizer["Designation"]
+                                </th>
+                                <th>
+                                    @Localizer["DateTimeIn"]
+                                </th>
+                                <th>
+                                    @Localizer["DateTimeOut"]
+                                </th>
+                                <th>
+                                    @Localizer["Description"]
+                                </th>
+                                <th>
+                                    @Localizer["Signature"]
+                                </th>
+                                <th> </th>
+                                <th> @Localizer["Action"]</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Designation)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.DateTimeIn)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.DateTimeOut)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(m => item.Signature)
+                                    </td>
+                                    <td>
+                                        <partial name="_TableButtonPartialAJWDPIO" model="item.Id" />
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>@Localizer["No Notice Exists..."]</p>
+                }
+            </div>
+        </div>
+
+    </div>
+</body>
+<br />
+@section Scripts{
+    <script>
+    </script>
+
+}

@@ -1,0 +1,367 @@
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*this code is for language transalator inject localizer--------------*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "DailyTransactionReport";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
+
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
+<br />
+@*main transaction sheet*@
+<body>
+    <div class="container-fluid backgroundWhiteBorder10Padding">
+        <div class="row">
+            <form class=" col-sm-12">
+                <div class="BackToList">
+                    <a type="button" asp-action="AllDailyAccountsReports" asp-area="Account" asp-controller="DailyAccountReport" class="btn btn-primary hover btn-block form-control btn-sm"><i class="fas fa-backward"></i> @Localizer["Back to List"]</a>
+                </div>
+                <div class="PrintP">
+                    <button class="btn btn-theme btn-print" onclick="myFunction()"> Print <i class="fa fa-print" aria-hidden="true"></i></button>
+                </div>
+                <table class="table table-striped table-hover table-bordered table-sm SubH">
+                    <thead>
+                        <tr class="text-center">
+                            <th colspan="7"><img src="~/Image/1.png" alt="Image" width="100" height="100" /></th>
+                        </tr>
+                        <tr>
+                            <th class="titleAccountofficeReport" colspan="7">@Localizer["Daily Cash Transaction Report-Account Office"]</th>
+                        </tr>
+                        <tr>
+                            <th class="text-left" colspan="7"> 04/05/2021  :<span class=""> @Localizer["Date"]</span> </th>
+                        </tr>
+                        <tr>
+                            <th class="text-center" scope="col">@Localizer["(Rs.)Cradit"]</th>
+                            <th class="text-center " scope="col">@Localizer["(Rs.)Debit"]</th>
+                            <th class="text-center " scope="col" style="font-size:small">@Localizer["P-Order|G-Pass|S-Order|Checq No|D-Slip|O-Online"]</th>
+                            <th class="text-center " scope="col" colspan="2">@Localizer["Description"]</th>
+                            <th class="text-center " scope="col">@Localizer["Account Type"]</th>
+                            <th class="text-center " scope="col">@Localizer["ID#"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2"><textarea type="text" class="form-control"></textarea></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr id="total">
+                            <th></th>
+                            <th></th>
+                            <th id="t1"></th>
+                            <th id="t2"></th>
+                            <th colspan="3">@Localizer["Total"]</th>
+                        </tr>
+                        <tr class="">
+                            <td colspan="7"></td>
+                        </tr>
+                        <tr>
+                            <th class="tg-9wq8" rowspan="3"></th>
+                            <td class="tg-9wq8" rowspan="3">@Localizer["Total Balance"]</td>
+                            @*total Name+Value*@
+                            <th class="tg-9wq8" rowspan="9"></th>
+                            @*opening balalnce Name+Value*@
+                            <th class="tg-9wq8" colspan="2"></th>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Opening blance"]</td>
+                            @*opening balalnce Name+Value*@
+
+                        </tr>
+                        <tr>
+                            <td class="tg-9wq8" colspan="2"></td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Today's income"]</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-9wq8" colspan="2"></td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Total Balance"]<br></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lboi" rowspan="2"></td>
+                            <td class="tg-9wq8" rowspan="2">@Localizer["Today's Total Expenses"]</td>
+
+                            <td class="title font-weight-bold" colspan="4">@Localizer["Closing Balance"]</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-9wq8" colspan="2">
+                            </td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Internal Account Opening Balance"]</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-lboi" rowspan="2"></td>
+                            <td class="tg-9wq8" rowspan="2">@Localizer["Closing Balance"]</td>
+                            <td class="tg-9wq8" colspan="2">
+                            </td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Petty Account Opening Balance"]</td>
+                        </tr>
+
+                        <tr>
+                            <td class="tg-9wq8" colspan="2">
+                            </td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Bank of Punjab Balance"]</td>
+                        </tr>
+                        <tr>
+                            @*un cleared balance Name+Value*@
+                            <td class="tg-0pky"></td>
+                            <td class="tg-9wq8">@Localizer["Un-cleared Balance"]</td>
+                            @*un cleared balance Name+Value*@
+
+                            <td class="tg-9wq8" colspan="2">
+                            </td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Meezan Bank Balance"]</td>
+                        </tr>
+                        <tr>
+                            @*current balalnce Name+Value*@
+                            <td class="tg-0pky"></td>
+                            <td class="tg-9wq8">@Localizer["Current Balance"]</td>
+                            @*current balalnce Name+Value*@
+                            @*Total balance NAme + Vlaue*@
+                            <td class="tg-9wq8" colspan="2"></td>
+                            <td class="tg-9wq8" colspan="2">@Localizer["Total Balance"]</td>
+                            @*Total balance NAme + Vlaue*@
+
+                        </tr>
+                        @*2ND TABLE end HERE*@
+                        @*sign table start here*@
+                        <tr>
+                            <th colspan="7" scope="col">@Localizer["Signature"]</th>
+                        </tr>
+                        <tr>
+                            <th scope="row" colspan="2">@Localizer["Account Manager"]</th>
+                            <th colspan="3">@Localizer["D.G.M"]</th>
+                            <th colspan="2">@Localizer["G.M"]</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                @Localizer["Signature"]:
+                                <input type="text" id="paidAmount" class="form-control" />
+                                @Localizer["Remarks"]:
+                                <input type="text" id="paidAmount" class="form-control" />
+                            </td>
+                            <td colspan="3">
+                                @Localizer["Signature"]:
+                                <input type="text" id="paidAmount" class="form-control" />
+                                @Localizer["Remarks"]:
+                                <input type="text" id="paidAmount" class="form-control" />
+                            </td>
+                            <td colspan="2">
+                                @Localizer["Signature"]:
+                                <input type="text" id="paidAmount" class="form-control" />
+                                @Localizer["Remarks"]:
+                                <input type="text" id="paidAmount" class="form-control" />
+                            </td>
+
+                        </tr>
+
+                        @*sign table end here*@
+                        <tr>
+                            <td scope="row" colspan="7" class="actionbtn">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @Localizer["Action"]
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-save"></i> @Localizer["Save File"]</a>
+                                        <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-restore-alt"></i> @Localizer["Clear Sheet"]</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+            @*main transaction sheet*@
+            <br />
+            @*signature*@
+        </div>
+    </div>
+</body>
+<!-- back to top button-->
+<a id="button"></a>
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
+@section Scripts{
+    <script>
+    </script>
+}
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+<style>
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+    /*-----these clases is for Background  Account Office----*/
+    .search-background {
+        background: url('../Image/dust_scratches.png');
+    }
+
+    .backgroundWhite {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .backgroundWhiteBorder {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+    }
+
+    .backgroundWhiteBorder10Padding {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .actionbtn {
+        width: 150px;
+        text-align: center;
+    }
+
+    .titleAccountofficeReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    /*  Css for Table of Each in Accounts----*/
+    .table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+        table-layout: fixed;
+        width: 100%
+    }
+    /*  Css for small Size of Content----*/
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
+    /*page print css----*/
+    .btn-theme {
+        background: #08818c;
+        color: #fff;
+    }
+
+    .btn {
+        font-family: arial;
+    }
+
+    .btn-print {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 1.33;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .PrintP {
+        margin-left: 985px;
+        position: absolute;
+        margin-top: -45px;
+    }
+    /*  Css for BackToList Button----*/
+    .BackToList {
+        width: 150px;
+    }
+
+    <style >
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+    /*-----these clases is for Background  Account Office----*/
+    .search-background {
+        background: url('../Image/dust_scratches.png');
+    }
+
+    .backgroundWhite {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .backgroundWhiteBorder {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+    }
+
+    .backgroundWhiteBorder10Padding {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .actionbtn {
+        width: 150px;
+        text-align: center;
+    }
+
+    .titleAccountofficeReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    /*  Css for Table of Each in Accounts----*/
+    .table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+        table-layout: fixed;
+        width: 100%
+    }
+    /*  Css for small Size of Content----*/
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
+    /*page print css----*/
+    .btn-theme {
+        background: #08818c;
+        color: #fff;
+    }
+
+    .btn {
+        font-family: arial;
+    }
+
+    .btn-print {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 1.33;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .PrintP {
+        margin-left: 985px;
+        position: absolute;
+        margin-top: -45px;
+    }
+    /*  Css for BackToList Button----*/
+    .BackToList {
+        width: 150px;
+    }
+
+    .textarea {
+        height: 60px;
+    }
+</style>
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

@@ -1,0 +1,259 @@
+﻿@*this code is for language transalator inject localizer--------------*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@*this code is for language transalator inject localizer--------------*@
+@model IEnumerable<AJWNoticeBoardHrm>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 400px;
+        margin: auto;
+    }
+
+    .footerrr {
+        /*text-align:center;*/
+        position: center;
+        height: 200px;
+        width: 1345px;
+        margin-left: -15px;
+        margin-right: -35px;
+        margin-bottom: -80px;
+        position: relative;
+        background-color: whitesmoke;
+    }
+
+    .ajwagro {
+        text-align: center;
+    }
+</style>
+
+@*caroudsel start here*@
+<div class="container-fluid mt-3">
+
+
+
+    <div id="myCarousel" style="margin-left:-50px; margin-right:-30px;margin-top:-17px" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+
+                <img src="~/Image/ajw out.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="carousel-item">
+                <img src="~/image/ajw caro 4.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="carousel-item">
+                <img src="~/image/ajw park.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="carousel-item">
+                <img src="~/image/ajw yoyo.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+</div>
+@*carousel eneded*@
+
+
+@*<div class="ajwagro search-background">
+
+    </div>*@
+<br />
+
+
+<div>
+    <h5 style="font-size: 25px !important; margin-top:-15px;" class="text-center">@Localizer["AJW AGRO INDUSTRY & WORKSHOP"]</h5>
+</div>
+<div class="container-fluid">
+    <div class="row">
+
+        @*here we start cards for profile---------*@
+        <div style="margin-left:1px;" class="card-deck col-12 text-center ">
+
+            <div style="font-size: 20px !important;" class="card m-1 col-sm-3">
+                <div class="card-header">
+                    <h3>@Localizer["C.E.O"]</h3>
+                </div>
+                <img class="card-img-top" src="~/Image/asim bro.png" height="350" asp-append-version="true" />
+                <div class="card-footer text-center">
+                    <a class="m-1">@Localizer["Mr Asim Jameel Sahib"]</a><br />
+
+                    <a class="m-1">ajwagroindustry.pk@Gmail.com</a><br />
+                    <a class="m-1">@Localizer["Tulamba,Punjab,Pakistan"]</a><br />
+                </div>
+            </div>
+
+            <div style="font-size: 20px !important;" class="card m-1 col-sm-3">
+                <div class="card-header">
+                    <h3> @Localizer["G.M"]</h3>
+                </div>
+                <img class="card-img-top" src="~/image/aqib broo.jpg" height="350" asp-append-version="true" />
+                <div class="card-footer text-center">
+                    <a class="m-1">@Localizer["Mr Aqib Naeem Sahib"]</a><br />
+
+                    <a class="m-1">ajwagroindustry.pk@Gmail.com</a><br />
+                    <a class="m-1">@Localizer["Tulamba,Punjab,Pakistan"]</a><br />
+                </div>
+            </div>
+
+            <div style="font-size: 20px !important;" class="card m-1 col-sm-3">
+                <div class="card-header">
+                    <h3>@Localizer["D.G.M"]</h3>
+                </div>
+                <img class="card-img-top" src="~/image/dgm bro.png" height="350" asp-append-version="true" />
+                <div class="card-footer text-center">
+                    <a class="m-1">@Localizer["Mr Hamza Asif Sahib"]</a><br />
+
+                    <a class="m-1">ajwagroindustry.pk@Gmail.com</a><br />
+                    <a class="m-1">@Localizer["Tulamba,Punjab,Pakistan"]</a><br />
+                </div>
+            </div>
+
+            <div style="margin-top:5px;" class="table col-sm-3">
+                @*@if (ViewBag.Count() > 0)
+                    {*@
+                <table class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th style="font-size:25px" class="text-in"> @Localizer["NOTIC BOARD"]</th>
+
+
+                        </tr>
+
+                    </thead>
+                    @*@foreach(var item in Model)
+                        {*@
+
+                    <tbody style="font-size:25px;">
+                        <tr style="text-align:justify;">
+
+                            <td>
+                                <marquee height="400" behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+
+                                    @*<p class="marqueeh4 text-center"><b> نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://ctsp.org.pk/JPMultan/Eligible/main.php"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>*@
+                                    @*<p class="text-center"> --------------------------</p>*@
+
+                                    @{
+                                        foreach (AJWNoticeBoardHrm b in ViewBag.Home)
+                                        {
+                                            <hr />
+                                            <div>
+                                                <h2 style="color:orange" class="text-center"> @b.Title  &nbsp;<img src="~/Image/blinknew.gif" /></h2>
+                                                <hr />
+                                                <p class="text-center" style="color:orange"> @b.Date  </p>
+                                            </div>
+
+                                            <hr />
+                                            <p>تفصیل:@b.Description</p>
+
+                                        }
+                                    }
+
+                                    @*<p class="marqueeh4 text-center"><b>نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://www.youtube.com/"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+
+                                        <p class="text-center"> --------------------------</p>
+                                        <p class="marqueeh4 text-center"><b>نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://ctsp.org.pk/JPMultan/Eligible/main.php"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+
+
+                                        <p class="text-center"> --------------------------</p>
+                                        <p class="marqueeh4 text-center"><b>نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://ctsp.org.pk/JPMultan/Eligible/main.php"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+
+                                        <p class="text-center"> --------------------------</p>*@
+
+
+                                </marquee>
+
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+
+                    @*}*@
+
+                </table>
+                @*}
+                    else
+                    {
+                        <p>@Localizer["No category exists..."]</p>
+                    }*@
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="table  col-lg">
+        <table class="table-striped" style="height:50px;">
+            <thead>
+                <tr>
+                    <th style="font-size:25px;" class="text-in">ضروری نوٹس </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr style="text-align:justify; ">
+
+                    <td>
+                        <marquee behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+
+                            <p class="marqueeh4 text-center"><b> نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://ctsp.org.pk/JPMultan/Eligible/main.php"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+                            ---------------------------------
+
+
+                            <p class="marqueeh4 text-center"><b>نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://www.youtube.com/"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+
+                            ---------------------------------
+                            <p class="marqueeh4 text-center"><b>نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://ctsp.org.pk/JPMultan/Eligible/main.php"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+
+
+                            ---------------------------------
+                            <p class="marqueeh4 text-center"><b>نوٹس کے لئے</b><a style=" color: #fb7307;" href="https://ctsp.org.pk/JPMultan/Eligible/main.php"> &nbsp;یہاں کلک کریں</a>&nbsp;<img src="~/Image/blinknew.gif" /></p>
+
+                            ---------------------------------
+                        </marquee>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>*@
+
+@*</div>*@
+@*</div>*@
+@*</div>*@
+@*end cards*@
+
+
+@section Scripts{
+    <script>
+    </script>
+
+}

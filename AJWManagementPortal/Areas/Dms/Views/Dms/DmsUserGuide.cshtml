@@ -1,0 +1,129 @@
+﻿
+
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "DMS User Guide";
+    Layout = "~/Views/Shared/_LayoutDms.cshtml";
+}
+
+
+
+
+
+<style>
+
+    div {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: x-large;
+        /*direction: rtl;*/
+    }
+</style>
+
+
+
+<div style="direction:rtl;" class="row text-right text-justify">
+    <div class="col-md-12 col-sm-12">
+
+        <div class="portlet light">
+
+            <br />
+
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead>
+                            <tr class="bg-dark text-white">
+                                <th>@localizer["ID#"]</th>
+                                <th class="text-center" colspan="5">@localizer["D.M.S Department User Guide"]</th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center"> <span class="en"> 1</span> </td>
+                                <td colspan="5">
+                                    @localizer["1st System Display General Home Page.After This, Login with User Name + Department + Password  "]
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 2</span> </td>
+                                <td colspan="5">
+                                    @localizer["The details of all (internal and external) transactions of the industry are with the Accounts Department"]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 3</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 4</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 5</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 6</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 7</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 8</span> </td>
+                                <td colspan="5">
+
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 9</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center"> <span class="en"> 10</span> </td>
+                                <td colspan="5">
+                                    @localizer[""]
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+    </script>
+
+}

@@ -1,0 +1,96 @@
+﻿@*this code is for language transalator inject localizer--------------*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@*this code is for language transalator inject localizer--------------*@
+
+@*@model IEnumerable<aDailyCash>*@
+@{
+    ViewData["Title"] = "Design-DailyReportsList-DMS";
+    Layout = "~/Views/Shared/_LayoutDms.cshtml";
+}
+
+@*<div class="container">
+    <div class="row">*@
+<style></style>
+<br />
+<form class="tabled" style="font-family:'Jameel Noori Nastaleeq';font-size:x-large">
+    <table class="table table-bordered">
+        <thead>
+
+            <tr>
+                <th class="bg-info text-white" scope="col" colspan="10" style="font-family:'Jameel Noori Nastaleeq';font-size:xx-large">@Localizer["Daily Report List-Design Office"]</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="10">
+                    <input type="text" placeholder="Search.." name="search" style="width:1030px;height:40px">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </th>
+            </tr>
+            <tr>
+
+                <th class="text-center bg-info text-white" scope="col">@Localizer["CRUD Operation"] </th>
+
+                <th class="text-center bg-info text-white" scope="col">@Localizer["Date"]</th>
+                <th class="text-center bg-info text-white" scope="col">@Localizer["Title"]</th>
+
+                <th class="text-center bg-info text-white" scope="col">@Localizer["ID#"]</th>
+
+            </tr>
+            @*@foreach (var item in Model)
+                {*@
+
+            <tr>
+                <th scope="row" style="width:150px" class="bg-info">
+
+                    <div class="btn-group bg-info text-white" role="group">
+                        <a class="btn btn-warning text-white" @*asp-action="DeleteByDate" asp-route-Id="@item.ValueDate.ToString("dd-MM-yyyy")" asp-route-redirect="DailyContinueReportList"*@>
+                            <i class="fas fa-download"></i>
+                        </a>
+
+
+                        <a class="btn btn-success text-white" @*asp-action="IndexByName" asp-route-Id="@item.ValueDate.ToString("dd-MM-yyyy")" asp-route-hide="true"*@>
+                            <i class="fas fa-list-alt"></i>
+                        </a>
+
+
+
+                    </div>
+
+                </th>
+                <th class="text-center  text-dark" scope="col">@*@item.ValueDate*@ </th>
+                <th class="text-center  text-dark" scope="col">@Localizer["Daily Report-Design Office"] </th>
+                <th class="text-center  text-dark" scope="col">@*@item.Id*@</th>
+
+
+
+
+            </tr>
+            @*}*@
+
+        </tbody>
+    </table>
+</form>
+@*</div>
+    </div>*@
+<style>
+    .tabled {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*margin-left: -200px;*/
+    }
+
+    .signt {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*  margin-left: -120px;*/
+    }
+</style>
+@section Scripts{
+    <script>
+    </script>
+
+}
