@@ -9,31 +9,14 @@ namespace AJWManagementPortal.Areas.Ceo.Controllers
     [Area("Ceo")]
     public class CeoController : Controller
     {
+        //--GET--CEoDashboard---Start----
         public IActionResult CeoDashboard()
         {
             return View();
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
-        //action for Calender Page 
-        public IActionResult Calender()
-        {
-            return View();
-        }
-        //end Calender page action
-        //action for All Departments Page 
-        public IActionResult AllDepartment()
-        {
-            return View();
-        }
-        //end All Departmentsr page action
-        //action for Userprofile Page 
-        public IActionResult UserProfile()
-        {
-            return View();
-        }
-        //action for Userprofile Page\
+        //--GET--CEoDashboard---Ended----
+        //--POST--CEoDashboard---Start----
+        //--POST--CEoDashboard---Eded----
+
     }
 }

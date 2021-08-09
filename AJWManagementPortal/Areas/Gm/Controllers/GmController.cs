@@ -13,22 +13,7 @@ namespace AJWManagementPortal.Areas.Gm.Controllers
         {
             return View();
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
-        //action for Calender Page 
-        public IActionResult Calender()
-        {
-            return View();
-        }
-        //end Calender page action
-        //action method for all department
-        public IActionResult AjwPrtalAllDepartments()
-        {
-            return View();
-        }
-        //action method for all department
+       
 
     }
 }

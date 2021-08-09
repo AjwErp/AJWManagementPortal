@@ -1,16 +1,21 @@
-﻿
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
 @{
     ViewData["Title"] = "ProductionUserGuide";
     Layout = "~/Views/Shared/_LayoutProduction.cshtml";
 }
 
 
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
+
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <form class="tabled">
-        <div class="container-fluid backgroundWhiteBorder10Padding ProductionLUBook">
+        <div class="container-fluid backgroundWhiteBorder10Padding CeoLUBook">
             <div class="col-md-12 col-sm-12">
                 <div class="portlet light">
                     <div class="portlet-body">
@@ -226,14 +231,35 @@
 
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
+
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
-    </script>
+        //---------JS for Back To Top Button On Each Page------------------Start-------
+        var btn = $('#button');
 
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+    </script>
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 <style>
-    .ProductionLUBook {
+    .CeoLUBook {
         text-align: right;
         text-align: justify;
         direction: rtl;
@@ -269,3 +295,4 @@
 
     /*page print css----*/
 </style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

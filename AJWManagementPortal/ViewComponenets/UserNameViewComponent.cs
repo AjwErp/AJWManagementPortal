@@ -24,7 +24,6 @@ namespace AJWManagementPortal.ViewComponenets
             var claims = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
             var userFromDb = await _db.ApplicationUser.FirstOrDefaultAsync(u => u.Id == claims.Value);
-
             return View(userFromDb);
         }
     }

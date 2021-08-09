@@ -5,7 +5,7 @@
 
 
 //JS-- for CEO Layout ------Start---search funtion for all dashboards----------
-function myFunction() {
+function myFunctionSearch() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("mySearch");
     filter = input.value.toUpperCase();
@@ -24,6 +24,6 @@ function myFunction() {
 }
 
 //---------Js for Print Function for all dashboardss-----
-function myFunction() {
+function myFunctionPrint() {
         window.print();
     }

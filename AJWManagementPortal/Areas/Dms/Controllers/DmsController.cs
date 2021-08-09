@@ -14,18 +14,5 @@ namespace AJWManagementPortal.Areas.Dms.Controllers
         {
             return View();
         }
-
-        //GET --LAW Book DMS
-        public IActionResult DmsLawBook()
-        {
-            return View();
-        }
-
-        //GET --DmsUserGuide DMS
-        public IActionResult DmsUserGuide()
-        {
-            return View();
-        }
-
     }
 }

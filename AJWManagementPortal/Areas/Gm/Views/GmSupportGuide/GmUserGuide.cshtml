@@ -1,14 +1,16 @@
-﻿
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
 @{
     ViewData["Title"] = "GmUserGuide";
     Layout = "~/Views/Shared/_LayoutGm.cshtml";
 }
 
 
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
-
-
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <form class="tabled">
@@ -228,12 +230,32 @@
 
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
-@section Scripts{
-    <script>
-    </script>
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
+@section Scripts{
+    <script>        //---------JS for Back To Top Button On Each Page------------------Start-------
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+    </script>
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 <style>
     .GmLUBook {
         text-align: right;
@@ -271,3 +293,4 @@
 
     /*page print css----*/
 </style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

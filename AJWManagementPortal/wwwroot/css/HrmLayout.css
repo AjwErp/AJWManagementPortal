@@ -1,4 +1,4 @@
-﻿body {
+﻿/*body {
     font-family: 'Jameel Noori Nastaleeq';
 }
 
@@ -9,9 +9,9 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
-}
+}*/
 /*//--DGM Layout page css--------start--------*/
-.mainul {
+/*.mainul {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     margin-bottom: 120px;
@@ -27,10 +27,10 @@ body {
 .ajwfooter {
     font-size: x-small;
     font-family: 'Jameel Noori Nastaleeq';
-}
+}*/
 /*//--DGM Layout page css---------ended-------*/
 /*//--DGM Office Reports page css-------start---------*/
-.Createbtn {
+/*.Createbtn {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     text-align: right;
@@ -38,14 +38,14 @@ body {
 
 .actionbtn {
     width: 150px;
-    text-align: center;
+    text-align: center;*/
     /*    background-color:slategrey;
 */
-}
+/*}*/
 
 /*----Accounts Support Guide--css--Start-------
 */
-div {
+/*div {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: x-large;
 }
@@ -61,17 +61,17 @@ div {
     font-size: xx-large;
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
-    color: black;
+    color: black;*/
     /*    background-color: slategrey;
 */
-}
+/*}
 
 .ASGTable {
     text-align: center;
-}
+}*/
 /*----Accounts Support Guide--css--Start-------*/
 /*----Accounts All Daily Accounts Reportss--css--Start-------*/
-.AccountofficeReport {
+/*.AccountofficeReport {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: x-large;
 }
@@ -85,9 +85,9 @@ div {
 .AccountReport {
     text-align: center;
     background-color: dimgrey;
-    color: white;
+    color: white;*/
     /**/
-}
+/*}
 
 .tabbody {
     text-align: center;
@@ -97,9 +97,9 @@ div {
 .signt {
     position: center;
     align-content: center;
-    text-align: center;
+    text-align: center;*/
     /*  margin-left: -120px;*/
-}
+/*}
 
 .header {
     overflow: hidden;
@@ -121,14 +121,14 @@ body {
     color: white;
     text-align: center;
     background-color: slategrey;
-}
+}*/
 /*----Accounts Support Guide--css--Start-------*/
 
 /*@*----------start-----general ledger report lisst------------------*@
 
 */
 
-table {
+/*table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #ddd;
@@ -137,23 +137,23 @@ table {
 th, td {
     text-align: center;
     padding: 8px;
-}
+}*/
 
 /*@*----------start-----general ledger report lisst------------------*@
 */
 /*@*----------start-----general ledger report lisst------------------*@
 
 */
-.Signature {
+/*.Signature {
     text-align: center;
     background-color: slategrey;
     color: white;
     font-size: medium;
-}
+}*/
 
 /*@*----------start-----general ledger report lisst------------------*@
 */
-.BackToList {
+/*.BackToList {
     width: 150px;
 }
 
@@ -218,9 +218,9 @@ table {
     text-align: center;
     height: 39px;
     border: solid 1px #C82333;
-}
+}*/
 /*Mostly USes Css Classes userprofile/footer/backtolist/table/backtotopbtn/smallheading/subh/print  start*/
-.Subhdr {
+/*.Subhdr {
     color: white;
     text-align: center;
     background-color: slategrey;
@@ -235,10 +235,10 @@ table {
 
 .actionbtn {
     width: 150px;
-    text-align: center;
+    text-align: center;*/
     /*    background-color:slategrey;
 */
-}
+/*}
 
 .Userprofile {
     width: 40px;
@@ -262,7 +262,7 @@ table {
     border: 1px solid #ddd;
     table-layout: fixed;
     width: 100%
-}
+}*/
 
 /*table {
     border-collapse: collapse;
@@ -271,16 +271,16 @@ table {
 }*/
 
 
-th, td {
+/*th, td {
     text-align: center;
     padding: 8px;
 }
 
-.SubH {
+.SubH {*/
     /*  color: white;*/
-    text-align: center;
+    /*text-align: center;*/
     /*    background-color: slategrey;
-*/ font-family: 'Jameel Noori Nastaleeq';
+*/ /*font-family: 'Jameel Noori Nastaleeq';
     font-size: medium;
 }
 
@@ -302,11 +302,11 @@ th, td {
 
 .smallfontHeading {
     font-size: medium;
-}
+}*/
 /*page print css----
 */
 
-.btn-theme {
+/*.btn-theme {
     background: #08818c;
     color: #fff;
 }
@@ -327,7 +327,7 @@ th, td {
     margin-left: 985px;
     position: absolute;
     margin-top: -45px;
-}
+}*/
 
 /*page print css----*/
 
@@ -339,7 +339,7 @@ th, td {
 
 
 /*----Accounts All Daily Accounts Reportss--css--Start-------*/
-.AccountofficeReport {
+/*.AccountofficeReport {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: x-large;
 }
@@ -363,50 +363,50 @@ th, td {
 
 .thhead {
     height: 45px;
-}
+}*/
 /* Css for Heading on every where in Accounts----*/
-.header {
+/*.header {
     overflow: hidden;
     padding: 10px 10px;
     font-size: 40px;
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
-}
+}*/
 
 /* Css for Sheet Logo on Each Sheet Logo in Accounts----*/
-.SheetLogo {
+/*.SheetLogo {
     color: white;
     background-color: slategrey;
-}
+}*/
 
 /* Css for Selector Fields on Each sheets in Accounts----*/
-.SelectSheet {
+/*.SelectSheet {
     box-sizing: border-box;
     height: 80px;
     width: 180px;
-}
+}*/
 
 /* Css for TextArea Filds in Accounts----*/
-.Textarea {
+/*.Textarea {
     box-sizing: border-box;
     height: 50px;
     width: 130px;
-}
+}*/
 
 /* Css for TextArea Filds in Accounts----*/
-.textarea {
+/*.textarea {
     height: 60px;
-}
+}*/
 
 /*//--Css for main Ul Tage of Each Page--------start--------*/
-.mainul {
+/*.mainul {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     margin-bottom: 120px;
-}
+}*/
 
 /*//--CSS For Create button & Action Button of Each Page------start---------*/
-.Createbtn {
+/*.Createbtn {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     text-align: right;
@@ -415,112 +415,112 @@ th, td {
 .actionbtn {
     width: 150px;
     text-align: center;
-}
+}*/
 
 /*----CSS For Accounts Support Guide--LAW Book/User Guide--Start-------*/
-div {
+/*div {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: x-large;
 }
 
 .ASGTable {
     text-align: center;
-}
+}*/
 
 /* Css for Table Body on each page in Accounts----*/
-.tabbody {
+/*.tabbody {
     text-align: center;
     color: black;
-}
+}*/
 
 /*  Css for Signature Title on Each Sheet In Accounts----*/
-.Signrow {
+/*.Signrow {
     text-align: center;
     font-size: x-large;
     font-family: 'Jameel Noori Nastaleeq';
     background-color: slategrey;
     color: white;
-}
+}*/
 
 /* Css for Signature authority on each sheets in Accounts----*/
-.Signature {
+/*.Signature {
     text-align: center;
     background-color: slategrey;
     color: white;
     font-size: medium;
-}
+}*/
 
 /*  Css for Signature text fields on Each Sheet In Accounts----*/
-.signt {
+/*.signt {
     position: center;
     align-content: center;
-    text-align: center;
+    text-align: center;*/
     /*  margin-left: -120px;*/
-}
+/*}*/
 
 /*Mostly USes Css Classes userprofile/footer/backtolist/table/backtotopbtn/smallheading/subh/print --for Accounts Department- start*/
-.Title {
+/*.Title {
     font-size: xx-large;
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
     color: black;
-}
+}*/
 
 /*  Css for Sub Heading of table----*/
-.Subhdr {
+/*.Subhdr {
     color: white;
     text-align: center;
     background-color: slategrey;
-}
+}*/
 
 /*  Css for small Size of Content----*/
-.SubH {
+/*.SubH {
     text-align: center;
     font-family: 'Jameel Noori Nastaleeq';
     font-size: medium;
-}
+}*/
 
 /*  Css for User Profile Accounts Layout----*/
-.Userprofile {
+/*.Userprofile {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 30px;
-}
+}*/
 
 /*  Css for footer Accounts Layout----*/
-.ajwfooter {
+/*.ajwfooter {
     font-size: x-small;
     font-family: 'Jameel Noori Nastaleeq';
-}
+}*/
 
 /*  Css for BackToList Button----*/
-.BackToList {
+/*.BackToList {
     width: 150px;
-}
+}*/
 
 /*  Css for Table of Each in Accounts----*/
-.table {
+/*.table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #ddd;
     table-layout: fixed;
     width: 100%
-}
+}*/
 /*  Css for Table of each in Accounts----*/
-table {
+/*table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #ddd;
-}
+}*/
 /*  Css for TH/TD of Each Table in Accounts----*/
-th, td {
+/*th, td {
     text-align: center;
     padding: 8px;
-}
+}*/
 
 /*  Css for Back To Top Button in Accounts----*/
-.lang_btn {
+/*.lang_btn {
     font-family: "ProximaNova";
     color: #fff;
     font-size: 15px;
@@ -534,15 +534,15 @@ th, td {
     text-align: center;
     height: 39px;
     border: solid 1px #C82333;
-}
+}*/
 
 /*  Css for Small Content Of Accounts----*/
-.smallfontHeading {
+/*.smallfontHeading {
     font-size: medium;
-}
+}*/
 
 /*page print css----*/
-.btn-theme {
+/*.btn-theme {
     background: #08818c;
     color: #fff;
 }
@@ -563,7 +563,7 @@ th, td {
     margin-left: 985px;
     position: absolute;
     margin-top: -45px;
-}
+}*/
 
 /*page print css----*/
 
@@ -572,7 +572,7 @@ th, td {
 
 
 /*-----csss for Back To Top*/
-#button {
+/*#button {
     display: inline-block;
     background-color: #FF9800;
     width: 50px;
@@ -614,5 +614,5 @@ th, td {
 
 #button {
     margin: 30px;
-}
+}*/
 

@@ -1,10 +1,10 @@
 ﻿/*-----------------------------------*/
 /*//css form DGM Layout*/
 
-body {
+/*body {
     font-family: 'Jameel Noori Nastaleeq';
 }
-/*body {
+body {
     font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,13 +12,13 @@ body {
     background-color: #fff;
 }*/
 /*//--DGM Layout page css--------start--------*/
-.mainul {
+/*.mainul {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     margin-bottom: 120px;
-}
+}*/
 
-.Userprofile {
+/*.Userprofile {
     width: 40px;
     height: 40px;
     object-fit: cover;
@@ -28,17 +28,17 @@ body {
 .ajwfooter {
     font-size: x-small;
     font-family: 'Jameel Noori Nastaleeq';
-}
+}*/
 /*//--DGM Layout page css---------ended-------*/
 /*//--DGM Office Reports page css-------start---------*/
-.Createbtn {
+/*.Createbtn {
     font-family: 'Jameel Noori Nastaleeq';
     font-size:large;
     text-align:right;
     
    
-}
-.DgmofficeReport {
+}*/
+/*.DgmofficeReport {
     font-family:'Jameel Noori Nastaleeq';
     font-size:x-large;
 }
@@ -50,50 +50,50 @@ body {
     font-family:'Jameel Noori Nastaleeq';
     font-size:xx-large;
     font-weight:bold;
-}
+}*/
 
-.actionbtn {
+/*.actionbtn {
     width: 150px;
-    text-align: center;
+    text-align: center;*/
 /*    background-color:slategrey;
-*/}
+*//*}
 
 .DgmReport {
     text-align: center;
     background-color:dimgrey;
-    color:white;
-/**/}
-.tabbody{
+    color:white;*/
+/**//*}*/
+/*.tabbody{
     text-align:center;
     color:black;
    
-}
-.BackToList {
+}*/
+/*.BackToList {
     width: 150px;
-}
+}*/
 /*//--DGM Office Reports page css---------ended-------*/
 /*//--AllDepartmentDailyReportbyDGM to CEO Reports page css---------start-------*/
-.tabled {
-    position: center;
-    /**/ align-content: center;
+/*.tabled {
+    position: center;*/
+    /**/ /*align-content: center;
     text-align: center;
     font-size:xx-small;
-    font-family:'Jameel Noori Nastaleeq'
+    font-family:'Jameel Noori Nastaleeq'*/
     /*margin-left: -200px;*/
-}
+/*}
 
 .header {
     overflow: hidden;
     padding: 10px 10px;
-    font-size: 40px;
+    font-size: 40px;*/
 /*    font-family: 'Jameel Noori Nastaleeq';
-*/    text-align: center;
-}
+*/    /*text-align: center;
+}*/
 
 
 /*------------page stop buttom stop top--------*/
 
-#button {
+/*#button {
     text-align: center;
     border-radius: 4px;
     position: fixed;
@@ -109,10 +109,10 @@ body {
     #button.show {
         opacity: 1;
         visibility: visible;
-    }
+    }*/
 /*------------page stop buttom stop top--------*/
 
-.btnback {
+/*.btnback {
     width: 150px;
     text-align: left;
 }
@@ -127,14 +127,14 @@ body {
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
     color: white;
-    font-weight: bold;
+    font-weight: bold;*/
     /*    background-color: slategrey;*/
-}
-.SubH {
+/*}
+.SubH {*/
   /*  color: white;*/
-    text-align: center;
+    /*text-align: center;*/
 /*    background-color: slategrey;
-*/    font-family:'Jameel Noori Nastaleeq';
+*/    /*font-family:'Jameel Noori Nastaleeq';
     font-size:medium;
 }
 .Subhdr {
@@ -147,7 +147,7 @@ body {
 .SheetLogo {
     color: white;
     background-color: slategrey;
-}
+}*/
 /*//--DAllDepartmentDailyReportbyDGM to CEO Reports page cs---------ended-------*/
 /*//--AllDepartmentMonthlyReportbyDGM to CEO Reports page css---------start-------*/
 /*//--DAllDepartmenMonthlyReportbyDGM to CEO Reports page cs---------ended-------*/
@@ -157,26 +157,26 @@ body {
 /*//--DgmAccountsDepartmentReportsList Reports page cs---------ended-------*/
 /*//--DGM KAW Book and USer Guide page cs---------Start-------*/
 
-div {
+/*div {
     font-family: 'Jameel Noori Nastaleeq';
-    font-size: x-large;
+    font-size: x-large;*/
     /*direction: rtl;*/
-}
+/*}*/
 /*.Dgmlawbooktab {
     align-content:center;
     text-align:center;
 }*/
 
-.Signature {
+/*.Signature {
     text-align: center;
     background-color: slategrey;
     color: white;
     font-size: medium;
-}
+}*/
 /*//--DGM KAW Book and User Guide page cs---------Ended-------*/
 
 /*//--DgmAccountsDepartmentReportsList Reports page cs---------ended-------*/
-.table {
+/*.table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #ddd;
@@ -200,7 +200,7 @@ div {
 }
 .smallfontHeading {
     font-size: medium;
-}
+}*/
 
 
 /*-----------GM-CSS-----------
@@ -209,16 +209,16 @@ div {
     font-family: 'Jameel Noori Nastaleeq';
 }*/
 /*//--DGM Layout page css--------start--------*/
-.mainul {
+/*.mainul {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     margin-bottom: 210px;
 }
 
-.Submenuu {
+.Submenuu {*/
     /*    margin-left:-15px;
 */
-    text-align: center;
+    /*text-align: center;
 }
 
 .Createbtn {
@@ -229,24 +229,24 @@ div {
 
 .actionbtn {
     width: 150px;
-    text-align: center;
+    text-align: center;*/
     /*    background-color:slategrey;
 */
-}
+/*}
 
 .ajwfooter {
     font-size: x-small;
     font-family: 'Jameel Noori Nastaleeq';
-}
+}*/
 
 /*//-----GM---GM Accounts Department Reportss-------*/
-.header {
+/*.header {
     overflow: hidden;
     padding: 10px 10px;
     font-size: 40px;
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
-}
+}*/
 
 /*body {
     font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
@@ -256,36 +256,13 @@ div {
     background-color: #fff;
 }*/
 
-.signt {
+/*.signt {
     position: center;
     align-content: center;
-    text-align: center;
+    text-align: center;*/
     /*  margin-left: -120px;*/
-}
-/*page print css----
-*/
-.btn-theme {
-    background: #08818c;
-    color: #fff;
-}
+/*}*/
 
-.btn {
-    font-family: arial;
-}
-
-.btn-print {
-    padding: 10px 24px;
-    font-size: 16px;
-    line-height: 1.33;
-    vertical-align: middle;
-    float: left;
-}
-
-.PrintP {
-    margin-left: 985px;
-    position: absolute;
-    margin-top: -45px;
-}
 
 /*page print css----*/
 /*//-----GM---GM Accounts Department Reportss-------*/
@@ -294,7 +271,7 @@ div {
 /*------------GM-css---------*/
 
 /*Mostly USes Css Classes userprofile/footer/backtolist/table/backtotopbtn/smallheading/subh/print  start*/
-.Subhdr {
+/*.Subhdr {
     color: white;
     text-align: center;
     background-color: slategrey;
@@ -309,10 +286,10 @@ div {
 
 .actionbtn {
     width: 150px;
-    text-align: center;
+    text-align: center;*/
     /*    background-color:slategrey;
 */
-}
+/*}
 
 .Userprofile {
     width: 40px;
@@ -336,7 +313,7 @@ div {
     border: 1px solid #ddd;
     table-layout: fixed;
     width: 100%
-}
+}*/
 
 /*table {
     border-collapse: collapse;
@@ -344,16 +321,16 @@ div {
     border: 1px solid #ddd;
 }*/
 
-th, td {
+/*th, td {
     text-align: center;
     padding: 8px;
 }
 
-.SubH {
+.SubH {*/
     /*  color: white;*/
-    text-align: center;
+    /*text-align: center;*/
     /*    background-color: slategrey;
-*/ font-family: 'Jameel Noori Nastaleeq';
+*/ /*font-family: 'Jameel Noori Nastaleeq';
     font-size: medium;
 }
 
@@ -375,11 +352,11 @@ th, td {
 
 .smallfontHeading {
     font-size: medium;
-}
+}*/
 /*page print css----
 */
 
-.btn-theme {
+/*.btn-theme {
     background: #08818c;
     color: #fff;
 }
@@ -400,7 +377,7 @@ th, td {
     margin-left: 985px;
     position: absolute;
     margin-top: -45px;
-}
+}*/
 
 /*page print css----*/
 
@@ -412,25 +389,25 @@ th, td {
 
 
 /*----Accounts All Daily Accounts Reportss--css--Start-------*/
-.AccountofficeReport {
+/*.AccountofficeReport {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: x-large;
-}
+}*/
 
-.titleAccountofficeReport {
+/*.titleAccountofficeReport {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: xx-large;
     font-weight: bold;
-}
+}*/
 
-.AccountReport {
+/*.AccountReport {
     text-align: center;
     background-color: dimgrey;
     color: white;
-}
+}*/
 
 /*------CSS For SupportGuide DGM*/
-.DgmLUBook {
+/*.DgmLUBook {
     text-align: right;
     text-align: justify;
     direction: rtl;
@@ -445,50 +422,50 @@ th, td {
 
 .thhead {
     height: 45px;
-}
+}*/
 /* Css for Heading on every where in Accounts----*/
-.header {
+/*.header {
     overflow: hidden;
     padding: 10px 10px;
     font-size: 40px;
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
-}
+}*/
 
 /* Css for Sheet Logo on Each Sheet Logo in Accounts----*/
-.SheetLogo {
+/*.SheetLogo {
     color: white;
     background-color: slategrey;
-}
+}*/
 
 /* Css for Selector Fields on Each sheets in Accounts----*/
-.SelectSheet {
+/*.SelectSheet {
     box-sizing: border-box;
     height: 80px;
     width: 180px;
-}
+}*/
 
 /* Css for TextArea Filds in Accounts----*/
-.Textarea {
+/*.Textarea {
     box-sizing: border-box;
     height: 50px;
     width: 130px;
-}
+}*/
 
 /* Css for TextArea Filds in Accounts----*/
-.textarea {
+/*.textarea {
     height: 60px;
-}
+}*/
 
 /*//--Css for main Ul Tage of Each Page--------start--------*/
-.mainul {
+/*.mainul {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     margin-bottom: 120px;
-}
+}*/
 
 /*//--CSS For Create button & Action Button of Each Page------start---------*/
-.Createbtn {
+/*.Createbtn {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: large;
     text-align: right;
@@ -497,98 +474,98 @@ th, td {
 .actionbtn {
     width: 150px;
     text-align: center;
-}
+}*/
 
 /*----CSS For Accounts Support Guide--LAW Book/User Guide--Start-------*/
-div {
+/*div {
     font-family: 'Jameel Noori Nastaleeq';
     font-size: x-large;
 }
-
+*/
 
 
 
 
 /* Css for Table Body on each page in Accounts----*/
-.tabbody {
+/*.tabbody {
     text-align: center;
     color: black;
-}
+}*/
 
 /*  Css for Signature Title on Each Sheet In Accounts----*/
-.Signrow {
+/*.Signrow {
     text-align: center;
     font-size: x-large;
     font-family: 'Jameel Noori Nastaleeq';
     background-color: slategrey;
     color: white;
-}
+}*/
 
 /* Css for Signature authority on each sheets in Accounts----*/
-.Signature {
+/*.Signature {
     text-align: center;
     background-color: slategrey;
     color: white;
     font-size: medium;
-}
+}*/
 
 /*  Css for Signature text fields on Each Sheet In Accounts----*/
-.signt {
+/*.signt {
     position: center;
     align-content: center;
-    text-align: center;
+    text-align: center;*/
     /*  margin-left: -120px;*/
-}
+/*}*/
 
 /*Mostly USes Css Classes userprofile/footer/backtolist/table/backtotopbtn/smallheading/subh/print --for Accounts Department- start*/
-.Title {
+/*.Title {
     font-size: xx-large;
     font-family: 'Jameel Noori Nastaleeq';
     text-align: center;
     color: black;
-}
+}*/
 
 /*  Css for Sub Heading of table----*/
-.Subhdr {
+/*.Subhdr {
     color: white;
     text-align: center;
     background-color: slategrey;
-}
+}*/
 
 /*  Css for small Size of Content----*/
-.SubH {
+/*.SubH {
     text-align: center;
     font-family: 'Jameel Noori Nastaleeq';
     font-size: medium;
-}
+}*/
 
 /*  Css for User Profile Accounts Layout----*/
-.Userprofile {
+/*.Userprofile {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 30px;
-}
+}*/
 
 /*  Css for footer Accounts Layout----*/
-.ajwfooter {
+/*.ajwfooter {
     font-size: x-small;
     font-family: 'Jameel Noori Nastaleeq';
-}
+}*/
 
 /*  Css for BackToList Button----*/
-.BackToList {
+/*.BackToList {
     width: 150px;
-}
+}*/
 
 /*  Css for Table of Each in Accounts----*/
-.table {
+/*.table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid #ddd;
     table-layout: fixed;
     width: 100%
-}
+}*/
 /*  Css for Table of each in Accounts----*/
 /*table {
     border-collapse: collapse;
@@ -596,13 +573,13 @@ div {
     border: 1px solid #ddd;
 }*/
 /*  Css for TH/TD of Each Table in Accounts----*/
-th, td {
+/*th, td {
     text-align: center;
     padding: 8px;
-}
+}*/
 
 /*  Css for Back To Top Button in Accounts----*/
-.lang_btn {
+/*.lang_btn {
     font-family: "ProximaNova";
     color: #fff;
     font-size: 15px;
@@ -616,15 +593,15 @@ th, td {
     text-align: center;
     height: 39px;
     border: solid 1px #C82333;
-}
+}*/
 
 /*  Css for Small Content Of Accounts----*/
-.smallfontHeading {
+/*.smallfontHeading {
     font-size: medium;
-}
+}*/
 
 /*page print css----*/
-.btn-theme {
+/*.btn-theme {
     background: #08818c;
     color: #fff;
 }
@@ -645,7 +622,7 @@ th, td {
     margin-left: 985px;
     position: absolute;
     margin-top: -45px;
-}
+}*/
 
 /*page print css----*/
 
@@ -654,7 +631,7 @@ th, td {
 
 
 /*-----csss for Back To Top*/
-#button {
+/*#button {
     display: inline-block;
     background-color: #FF9800;
     width: 50px;
@@ -696,5 +673,5 @@ th, td {
 
 #button {
     margin: 30px;
-}
+}*/
 

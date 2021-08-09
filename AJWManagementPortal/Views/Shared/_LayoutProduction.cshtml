@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/css/ProductionLayout.css" rel="stylesheet" />
-    <link href="~/css/AdminLayout.css" rel="stylesheet" />
+    @*<link href="~/css/AdminLayout.css" rel="stylesheet" />*@
     <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" asp-append-version="true" />
     <!-- modernizr css -->
     @*css for Datatables*@
@@ -53,8 +53,7 @@
             <div class="sidebar-header">
                 <div class="container">
                     @*<a asp-action="ProductionDashboard" asp-controller="Production" asp-area="Production"><img src="~/Image/white.png" alt="logo"></a>*@
-                    <a style="font-size:20px;" class="navbar-brand text-info title" asp-action="ProductionDashboard" asp-controller="Production" asp-area="Production"><img id="main-logo" style="height:36px;" src="~/Image/white.png">&nbsp;&nbsp;<span class="text-warning">@Localizer["AGRO"]</span><span class="text-info">@Localizer["INDUSTRY"]</span>  </a>
-
+                    <a style="font-size:20px;" class="navbar-brand text-info title" asp-action="Index" asp-controller="Home" asp-area="Home"><img id="main-logo" style="height:36px;" src="~/Image/white.png">&nbsp;&nbsp;<span class="text-warning">@Localizer["AGRO"]</span><span class="text-info">@Localizer["INDUSTRY"]</span>  </a>
                 </div>
             </div>
             <div class="main-menu">
@@ -65,11 +64,11 @@
                                 <a asp-action="ProductionDashboard" asp-controller="Production" asp-area="Production" aria-expanded="true"><h4><span class="text-warning">@Localizer["Production"]</span><br /><span>@Localizer["Dashboard"]</span></h4></a>
                             </li>
                             @*<li class="search-box border-top">
-                                <form action="#">
-                                    <input type="text" name="search" id="mySearch" onkeyup="myFunction()" placeholder="@Localizer["Search for something..."]" required>
-                                    <i class="ti-search"></i>
-                                </form>
-                            </li>*@
+                                    <form action="#">
+                                        <input type="text" name="search" id="mySearch" onkeyup="myFunction()" placeholder="@Localizer["Search for something..."]" required>
+                                        <i class="ti-search"></i>
+                                    </form>
+                                </li>*@
                             <li class="border-top border-bottom">
                                 <a asp-controller="Production" asp-area="Production" asp-action="ProductionDashboard" aria-expanded="true">
                                     <i class="ti-layout-sidebar-left"></i><span>
@@ -91,26 +90,26 @@
                             </li>
 
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true">
+                                <a asp-area="Production" asp-controller="ProductionRepository" asp-action="DailyMonthlyYearlyAuditProductionReportsListRepository" aria-expanded="true">
                                     <i class="fa fa-building"></i>
-                                    <span>@Localizer["Repository"]</span>
+                                    <span>@Localizer["All Production Reports List"]</span>
                                 </a>
-                                <ul class="collapse">
-                                    <li class="border-top"><a asp-area="Production" asp-controller="Repository" asp-action="DailyMonthlyYearlyAuditProductionReportsListRepository" class="dropdown-item"><span class=""></span>&nbsp;&nbsp;@Localizer["All Production Reports List"]</a></li>
-                                </ul>
+                                @*<ul class="collapse">
+                                        <li class="border-top"><a asp-area="Production" asp-controller="ProductionRepository" asp-action="DailyMonthlyYearlyAuditProductionReportsListRepository" class="dropdown-item"><span class=""></span>&nbsp;&nbsp;@Localizer["All Production Reports List"]</a></li>
+                                    </ul>*@
                             </li>
                             <li class="border-top border-bottom">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-file-pdf-o"></i><span>@Localizer["Production PDF Report"]</span></a>
                                 <ul class="collapse">
-                                    <li class="border-top "><a asp-area="Production" asp-controller="ProductionReportPdf" asp-action="ProductionPdfReports" class="dropdown-item"><span class=""></span>&nbsp;&nbsp;@Localizer["Production All Pdf Reports"]</a></li>
+                                    <li class="border-top "><a asp-area="Production" asp-controller="ProductionPdfReport" asp-action="ProductionPdfReports" class="dropdown-item"><span class=""></span>&nbsp;&nbsp;@Localizer["Production All Pdf Reports"]</a></li>
                                 </ul>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
+
         <!-- sidebar menu area end -->
         <!-- main content area start -->
         <div class="main-content">
@@ -126,7 +125,7 @@
                         </div>
                         <div class="search-box pull-left">
                             <form action="#">
-                                <input type="text" name="search" id="mySearch" onkeyup="myFunction()" placeholder="@Localizer["Search for something..."]......" required>
+                                <input type="text" name="search" id="mySearch" onkeyup="myFunctionSearch()" placeholder="@Localizer["Search for something ..."]" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
@@ -143,7 +142,7 @@
                                 <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
                                     <span>2</span>
                                 </i>
-                                <div class="dropdown-menu bell-notify-box notify-box">
+                                <div class="dropdown-menu bell-notify-box notify-box bg-white">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
                                     <div class="nofity-list">
                                         <a href="#" class="notify-item">
@@ -173,20 +172,17 @@
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left font-weight-bold">@Localizer["Production Dashboard"]</h4>
-
                         </div>
                     </div>
                     @*--------------User Profile code using Identity-----------------*@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
-                            <img style="width:40px;height:40px; object-fit:cover;  border-radius:30px" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.Profile))" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img style="width:40px;height:40px; object-fit:cover;  border-radius:30px" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.Profile))" />&nbsp;&nbsp;&nbsp;&nbsp;
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown">@await Component.InvokeAsync("UserName")<i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-
                                 <a class="dropdown-item nav-link  border-bottom"><span class="fas fa-user"></span>&nbsp;&nbsp; @await Component.InvokeAsync("UserName")</a>
-
                                 <a class="dropdown-item nav-link border-bottom" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><span class="fas fa-wrench"></span>&nbsp;&nbsp;Manage Profile</a>
-                                <form class="form-inline " asp-area="Identity" asp-page="/Account/Logout">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout">
                                     <button type="submit" class="nav-link btn btn-link text-white"><i class=" btn btn-danger fas fa-user ">&nbsp;@Localizer["Logout"]</i></button>
                                 </form>
                             </div>
@@ -202,8 +198,6 @@
                     @RenderBody()
                 </main>
             </div>
-
-
             <!-- footer area start-->
             <footer class="footer-area bg-dark ajwfooter">
                 <ul class="nav bg-dark">
@@ -220,11 +214,9 @@
                         <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">@Localizer["About Us"]</a>
                     </li>
                     <li class="copyright ml-auto my-auto mr-2">
-
                         <a class="text-white">@Localizer["Copyright"] © 2021 <span style="font-size:small">@Localizer["AJW Agro Industry Portal"]</span></a>
                     </li>
                 </ul>
-
             </footer>
         </div>
     </div>
@@ -242,7 +234,6 @@
 
 
     <script src="~/js/ProductionLayout.js"></script>
-
     <script src="~/srtdash/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <!-- all line chart activation -->
@@ -254,13 +245,191 @@
     <!-- others plugins -->
     <script src="~/srtdash/assets/js/plugins.js"></script>
     <script src="~/srtdash/assets/js/scripts.js"></script>
+    <script src="~/js/site.js"></script>
     @*Java script for Datatables*@
     <script src="~/lib/datatables/js/jquery.dataTables.js"></script>
     @*Java script for Datatables*@
 
-
-
-
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+
+@section Scripts{
+    <script>
+        function myFunctionSearch() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("menu");
+            li = ul.getElementsByTagName("li");
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+
+                }
+            }
+        }
+
+        //------js for print fuction------------
+        function MyFunctionPrint() {
+            window.print();
+        }
+
+
+
+        //---------JS for Back To Top Button On Each Page------------------Start-------
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+
+    </script>
+
+}
+
+<style>
+    .lang_btn {
+        font-family: "ProximaNova";
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        background-color: #C82333;
+        text-transform: uppercase;
+        margin-top: 1.7%;
+        text-decoration: none !important;
+        width: 65px;
+        text-align: center;
+        height: 39px;
+        border: solid 1px #C82333;
+    }
+
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+    /*  Css for Table of Each in Accounts----*/
+    .table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+        table-layout: fixed;
+        width: 100%
+    }
+
+    .mainul {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: large;
+        margin-bottom: 120px;
+    }
+    /*  Css for Table of each in Accounts----*/
+    /*table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+    }*/
+    /*  Css for TH/TD of Each Table in Accounts----*/
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+    /*//--DGM Layout page css--------start--------*/
+
+    .ajwfooter {
+        font-size: x-small;
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    /*page print css----*/
+    .btn-theme {
+        background: #08818c;
+        color: #fff;
+    }
+
+    .btn {
+        font-family: arial;
+    }
+
+    .btn-print {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 1.33;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .PrintP {
+        margin-left: 985px;
+        position: absolute;
+        margin-top: -45px;
+    }
+
+    /*page print css----*/
+    /*-----csss for Back To Top*/
+    #button {
+        display: inline-block;
+        background-color: #FF9800;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
+
+        #button::after {
+            content: "\f077";
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 1em;
+            line-height: 50px;
+            color: #fff;
+        }
+
+        #button:hover {
+            cursor: pointer;
+            background-color: #333;
+        }
+
+        #button:active {
+            background-color: #555;
+        }
+
+        #button.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    #button {
+        margin: 30px;
+    }
+</style>

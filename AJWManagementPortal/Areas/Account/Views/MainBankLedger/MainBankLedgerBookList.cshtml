@@ -1,6 +1,5 @@
 ﻿
 @*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
-@*this code is for language transalator inject localizer--------------*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
 @{
     ViewData["Title"] = "MainBankLedgerBookList";
@@ -33,7 +32,7 @@
 
                 <table class="table table-bordered" id="DMBLBook">
                     <thead>
-                        <tr class="Subhdr smallfontHeading">
+                        <tr class="Subhdr">
                             <th>@Localizer["Action"] </th>
                             <th>@Localizer["Date"]</th>
                             <th>@Localizer["Title"]</th>
@@ -41,7 +40,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody smallfontHeading">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,24 +77,19 @@
                 <br />
                 <table class="table table-bordered" id="MMBLBook">
                     <thead>
-                        <tr class="Subhdr smallfontHeading">
+                        <tr class="Subhdr">
 
                             <th>@Localizer["Action"] </th>
-
                             <th scope="col">@Localizer["Date"]</th>
                             <th scope="col">@Localizer["Title"]</th>
-
                             <th scope="col">@Localizer["ID#"]</th>
-
                         </tr>
                     </thead>
                     <tbody>
-
-
                         @*@foreach (var item in Model)
                             {*@
 
-                        <tr class="tabbody smallfontHeading">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -150,7 +144,7 @@
                         @*@foreach (var item in Model)
                             {*@
 
-                        <tr class="tabbody smallfontHeading">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

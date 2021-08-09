@@ -1,12 +1,18 @@
 ﻿
+
+
+@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 @{
     ViewData["Title"] = "AccessoryUserGuide";
     Layout = "~/Views/Shared/_LayoutAccessory.cshtml";
 }
-<style>
-</style>
+
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
+
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <form class="tabled">
@@ -226,13 +232,17 @@
 
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
     </script>
-
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 <style>
     .AccessoryLUBook {
         text-align: right;
@@ -270,3 +280,4 @@
 
     /*page print css----*/
 </style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

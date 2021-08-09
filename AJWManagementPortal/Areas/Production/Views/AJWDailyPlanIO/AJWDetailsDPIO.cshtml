@@ -1,27 +1,17 @@
-﻿
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+
 @{
     ViewData["Title"] = "AJWDetailsDPIO";
     Layout = "~/Views/Shared/_LayoutProduction.cshtml";
 }
 
 @model AJWManagementPortal.Models.AJWDailyPlanIO
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 
-<style>
-    .tabled {
-        position: center;
-        align-content: center;
-        text-align: center;
-        /*margin-left: -200px;*/
-    }
-
-    .signt {
-        position: center;
-        align-content: center;
-        text-align: center;
-        /*  margin-left: -120px;*/
-    }
-</style>
 
 <form class="" method="post" asp-action="AJWEditDPIO">
     <table class="tabled table table-bordered">
@@ -64,8 +54,30 @@
     </table>
 </form>
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
     </script>
-
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+
+<style>
+    .tabled {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*margin-left: -200px;*/
+    }
+
+    .signt {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*  margin-left: -120px;*/
+    }
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

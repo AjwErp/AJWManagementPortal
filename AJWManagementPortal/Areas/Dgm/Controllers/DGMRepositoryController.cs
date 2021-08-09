@@ -24,30 +24,6 @@ namespace AJWManagementPortal.Areas.Dgm.Controllers
             return View();
         }
 
-        //Repository for Daily cash continues report list
-        public IActionResult DailyReportRepository()
-        {
-            return View();
-        }
-        //Repository for Daily cash continues report list
-        //Monthly Accounts report repository
-        public IActionResult MonthlyReportRepository()
-        {
-            return View();
-        }
-        //Monthly Accounts report repository
-        //Yearly report Repository List
-        public IActionResult YearlyReportRepository()
-        {
-            return View();
-        }
-        //Yearly report Repository List
-
-        //Yearly report Repository List
-        public IActionResult AccountsAuditReportsRepository()
-        {
-            return View();
-        }
-        //Yearly report Repository List
+       
     }
 }

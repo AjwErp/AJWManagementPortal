@@ -9,10 +9,16 @@ namespace AJWManagementPortal.Areas.Account.Controllers
     [Area("Account")]
     public class AccountsMonthlyYearlyController : Controller
     {
+
+        //GET --AccountsMonthlyYearlyReports--start----
         public IActionResult AccountsMonthlyYearlyReports()
         {
             return View();
         }
+        //GET --AccountsMonthlyYearlyReports--ended----
+        //POST --AccountsMonthlyYearlyReports--start----
+        //POST --AccountsMonthlyYearlyReports--ended----
+
 
     }
 }

@@ -1,6 +1,6 @@
-﻿@*this code is for language transalator inject localizer--------------*@
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
 
 @model IEnumerable<ApplicationUser>
 
@@ -9,17 +9,19 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<style></style>
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
 
-    <div class="border backgroundWhite backgroundWhiteBorder10Padding">
+    <div class="border  backgroundWhiteBorder10Padding">
         <h2 class="text-dark text-center"><img src="~/Image/finallogo.png" alt="Image" width="100" height="100" /><br />@Localizer["Registered User List"]</h2>
         <div class="row" style="font-weight:bold">
             <div class="col-12 text-right">
                 <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-primary"><i class="fas fa-plus"></i> &nbsp; @Localizer["New Employee Register"]</a>
             </div>
+
         </div>
         <br />
         <div>
@@ -28,33 +30,33 @@
                 <table class="table table-striped border SubH" id="RUTable">
                     <tr class="Subhdr text-center text-dark">
 
-                        <th colspan="2">@Localizer["Name"] </th>
-                        <th colspan="3">@Localizer["Email"]</th>
-                        <th colspan="2">@Localizer["Mobile No"]</th>
+                        <th >@Localizer["Name"] </th>
+                        <th>@Localizer["Email"]</th>
+                        <th>@Localizer["Mobile No"]</th>
                         <th>@Localizer["Department"]</th>
-                        <th colspan="2">@Localizer["Designation"]</th>
-                        <th colspan="2">@Localizer["Lock/Unlock"]</th>
+                        <th>@Localizer["Designation"]</th>
+                        <th>@Localizer["Lock/Unlock"]</th>
                     </tr>
                     @foreach (var item in Model)
                     {
-                        <tr class="text-center ">
+                        <tr class="text-center text-sm-center">
 
-                            <td colspan="2">
+                            <td >
                                 @Html.DisplayFor(m => item.Name)
                             </td>
-                            <td colspan="3">
+                            <td>
                                 @Html.DisplayFor(m => item.Email)
                             </td>
-                            <td colspan="2">
+                            <td>
                                 @Html.DisplayFor(m => item.MobileNumber)
                             </td>
                             <td>
                                 @Html.DisplayFor(m => item.Department)
                             </td>
-                            <td colspan="2">
+                            <td>
                                 @Html.DisplayFor(m => item.Designation)
                             </td>
-                            <td colspan="2">
+                            <td >
 
                                 @if (item.LockoutEnd == null || item.LockoutEnd < DateTime.Now)
                                 {
@@ -84,8 +86,94 @@
 
 </body>
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
-    </script>
 
+    //    $(document).ready(function () {
+    //$('#RUTable').DataTable();
+    //    });
+        $(document).ready(function () {
+            $('#RUTable').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+    </script>
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+<style>
+    .header {
+        overflow: hidden;
+        padding: 10px 10px;
+        font-size: 40px;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+    }
+
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+
+    .Createbtn {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: large;
+        text-align: right;
+    }
+
+    .actionbtn {
+        width: 150px;
+        text-align: center;
+    }
+
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
+
+    .titleAccountofficeReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .Subhdr {
+        color: white;
+        text-align: center;
+        background-color: slategrey;
+    }
+
+    .tabbody {
+        text-align: center;
+        color: black;
+    }
+
+    .lang_btn {
+        font-family: "ProximaNova";
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        background-color: #C82333;
+        text-transform: uppercase;
+        margin-top: 1.7%;
+        text-decoration: none !important;
+        width: 65px;
+        text-align: center;
+        height: 39px;
+        border: solid 1px #C82333;
+    }
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

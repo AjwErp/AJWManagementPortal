@@ -1,41 +1,27 @@
-﻿@*this code is for language transalator inject localizer--------------*@
+﻿
+@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
-
 @model AJWNoticeBoardHrm
-
 
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_LayoutHrm.cshtml";
 }
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 
-
-<style>
-    .tabled {
-        position: center;
-        align-content: center;
-        text-align: center;
-        /*margin-left: -200px;*/
-    }
-
-    .signt {
-        position: center;
-        align-content: center;
-        text-align: center;
-        /*  margin-left: -120px;*/
-    }
-</style>
-<form class="" method="post" asp-action="Create" style="font-family:'Jameel Noori Nastaleeq';font-size:x-large">
+<form class="backgroundWhiteBorder10Padding" method="post" asp-action="Create">
     <table class="tabled table table-bordered">
         <thead>
             <tr>
-                <th class="bg-info text-white" scope="col" colspan="6"><img src="~/Image/white.png" alt="Image" width="100" height="100" /><br />@Localizer["AJW AGRO INDUSTRY"]</th>
+                <th class="" scope="col" colspan="6"><img src="~/Image/1.png" alt="Image" width="100" height="100" /></th>
 
             </tr>
             <tr>
-                <th class="bg-info text-white" scope="col" colspan="6">@Localizer["AJW Notice Board"]</th>
+                <th class="titleHrmofficeReport" scope="col" colspan="6">@Localizer["AJW Notice Board"]</th>
 
             </tr>
         </thead>
@@ -43,17 +29,17 @@
 
             <tr>
 
-                <th class="text-right" colspan="3" scope="col">
+                <th class="text-right" colspan="4" scope="col">
 
                     <input asp-for="Date" class="form-control text-right" />
                     <span asp-validation-for="Date" class="text-danger"></span>
                 </th>
-                <th class="text-center bg-info" colspan="3" scope="col">
+                <th class="text-center" colspan="2">
                     @Localizer["Date"]
                 </th>
             </tr>
             <tr>
-                <th class="text-center bg-info text-white" scope="col" colspan="6">@Localizer["Title"]</th>
+                <th class="text-center titleHrmofficeReport" scope="col" colspan="6">@Localizer["Title"]</th>
             </tr>
             <tr>
                 <th scope="row" colspan="6">
@@ -63,7 +49,7 @@
                 </th>
             </tr>
             <tr>
-                <th class="text-center bg-info text-white" scope="col" colspan="6">@Localizer["Description"]</th>
+                <th class="text-center titleHrmofficeReport" scope="col" colspan="6">@Localizer["Description"]</th>
             </tr>
             <tr>
                 <th scope="row" colspan="6">
@@ -120,9 +106,19 @@
                     </td>
 
                 </tr>*@
-            <tr class="bg-dark text-white text-center">
+            <tr class="text-center">
                 <td colspan="6">
-                    <partial name="_CreateAndBackToListButton" />
+                    @*<partial name="_CreateAndBackToListButton" />*@
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @Localizer["Action"]
+                        </button>
+                        <div class="dropdown-menu">
+                            <input type="submit" class="btn btn-info form-control" value="Create" />
+                            <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                            <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> @Localizer["Download"]</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </tbody>
@@ -135,9 +131,91 @@
 }
 
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
 
-@section Scripts{
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
+@*@section Scripts{
     <script>
     </script>
+}*@
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
 
-}
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+<style>
+    .titleHrmofficeReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .header {
+        overflow: hidden;
+        padding: 10px 10px;
+        font-size: 40px;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+    }
+
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+
+    .Createbtn {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: large;
+        text-align: right;
+    }
+
+    .actionbtn {
+        width: 150px;
+        text-align: center;
+    }
+
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
+
+    .titleAccountofficeReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .Subhdr {
+        color: white;
+        text-align: center;
+        background-color: slategrey;
+    }
+
+    .tabbody {
+        text-align: center;
+        color: black;
+    }
+
+    .lang_btn {
+        font-family: "ProximaNova";
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        background-color: #C82333;
+        text-transform: uppercase;
+        margin-top: 1.7%;
+        text-decoration: none !important;
+        width: 65px;
+        text-align: center;
+        height: 39px;
+        border: solid 1px #C82333;
+    }
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

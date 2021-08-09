@@ -1,4 +1,7 @@
 ﻿
+@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewData["Title"] = "DesignUserGuide";
@@ -6,7 +9,9 @@
 }
 
 
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <form class="tabled">
@@ -16,7 +21,7 @@
                     <div class="portlet-body">
                         <div class="table-responsive">
                             <div class="titleLaw">
-                                <span class="font-weight-bold">@localizer["Design DEPARTMENT SYSTEM USER GUIDE"]</span>
+                                <span class="font-weight-bold">@localizer["DESIGN DEPARTMENT SYSTEM USER GUIDE"]</span>
                             </div>
                             <br />
                             <div class="PrintP">
@@ -226,15 +231,17 @@
 
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
+
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
     </script>
-
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
 
-
-
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 <style>
     .DesignLUBook {
         text-align: right;
@@ -272,3 +279,4 @@
 
     /*page print css----*/
 </style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

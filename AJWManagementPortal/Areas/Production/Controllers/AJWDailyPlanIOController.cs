@@ -94,7 +94,7 @@ namespace AJWManagementPortal.Areas.Production.Controllers
             return View(Dpin);
         }
         ////POST  - DeleteDP Daily Plan In
-        [HttpPost, ActionName("AJWDeleteDP")]
+        [HttpPost, ActionName("AJWDeleteDPIO")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AJWDeleteConfirmedDPIO(int? id)
         {

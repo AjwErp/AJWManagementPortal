@@ -1,12 +1,15 @@
-﻿
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
 @{
     ViewData["Title"] = "SecurityLawBook";
     Layout = "~/Views/Shared/_LayoutSecurity.cshtml";
 }
 
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
-
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <form class="tabled">
@@ -32,7 +35,6 @@
                                         <th>@localizer["Page Number"]</th>
                                         <th>@localizer["Previous Edit Number"]</th>
                                         <th>@localizer["Previous Page Number"]</th>
-                                        <th colspan="2">@localizer["Action"]</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,19 +47,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td colspan="2" scope="row" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        
                                     </tr>
                                     <tr>
                                         <td> <span class="en">2</span> </td>
@@ -68,19 +58,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        
                                     </tr>
                                     <tr>
                                         <td> <span class="en">3</span> </td>
@@ -90,21 +68,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-
+                                        <td><input type="text" id="" class="form-control" /></td>                                    
                                     </tr>
                                     <tr>
                                         <td> <span class="en">4</span> </td>
@@ -114,20 +78,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">5</span> </td>
@@ -137,20 +88,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                     
                                     </tr>
                                     <tr>
                                         <td> <span class="en">6</span> </td>
@@ -160,20 +98,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">7</span> </td>
@@ -183,20 +108,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">8</span> </td>
@@ -206,20 +118,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">9</span> </td>
@@ -229,21 +128,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-
+                                        <td><input type="text" id="" class="form-control" /></td>                                     
                                     </tr>
                                     <tr>
                                         <td> <span class="en">10</span> </td>
@@ -253,21 +138,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-
+                                        <td><input type="text" id="" class="form-control" /></td>                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">11</span> </td>
@@ -277,20 +148,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">12</span> </td>
@@ -300,20 +158,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">13</span> </td>
@@ -323,20 +168,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">14</span> </td>
@@ -346,20 +178,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">15</span> </td>
@@ -369,20 +188,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">16</span> </td>
@@ -392,20 +198,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">17</span> </td>
@@ -415,20 +208,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">18</span> </td>
@@ -438,20 +218,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">19</span> </td>
@@ -461,20 +228,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                     
                                     </tr>
                                     <tr>
                                         <td> <span class="en">20</span> </td>
@@ -484,20 +238,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td><input type="text" id="" class="form-control" /></td>                                      
                                     </tr>
                                     <tr>
                                         <td> <span class="en">21</span> </td>
@@ -508,19 +249,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en">22</span> </td>
@@ -531,19 +260,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        
                                     </tr>
                                     <tr>
                                         <td> <span class="en">23</span> </td>
@@ -554,19 +271,7 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                       
                                     </tr>
                                     <tr>
                                         <td> <span class="en"> <button type="button" id="btnAdd" value="Add" class="btn btn-primary btn-sm form-control">@localizer["Add"]<br />@localizer["Row"]</button></span> </td>
@@ -577,22 +282,10 @@
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
                                         <td><input type="text" id="" class="form-control" /></td>
-                                        <td scope="row" colspan="2" class="actionbtn">
-                                            <div class="btn-group">
-                                                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    @localizer["Action"]
-                                                </button>
-                                                <div class="dropdown-menu" style="direction:ltr">
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-remove"></i> Remove Row</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-list-alt"></i> View</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-edit"></i> Edit</a>
-                                                    <a class="dropdown-item" asp-action="" asp-controller="" asp-area="Account"><i class="fas fa-trash-alt"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                       
                                     </tr>
                                     <tr>
-                                        <td scope="row" colspan="15" class="actionbtn">
+                                        <td scope="row" colspan="13" class="actionbtn">
                                             <a asp-action="CeoLawBookList" asp-area="Ceo" asp-controller="CeoSupportGuide" type="button" class="btn btn-primary btn-md fas fa-step-backward" value="Back To List">@localizer["Back To List"]</a>
 
                                             <div class="btn-group">
@@ -619,13 +312,17 @@
 
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
+
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
     </script>
-
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
 
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 <style>
     .SecurityLUBook {
         text-align: right;
@@ -663,4 +360,4 @@
 
     /*page print css----*/
 </style>
-
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

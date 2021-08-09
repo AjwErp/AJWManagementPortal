@@ -1,15 +1,15 @@
-﻿body {
+﻿/*body {
 }
 
 .AccessoryLUBook {
     text-align: right;
     text-align: justify;
     direction: rtl;
-}
+}*/
 
 
 /*page print css----*/
-.btn-theme {
+/*.btn-theme {
     background: #08818c;
     color: #fff;
 }
@@ -30,10 +30,10 @@
     margin-left: 985px;
     position: absolute;
     margin-top: -45px;
-}
+}*/
 
 /*page print css----*/
-.titleLaw {
+/*.titleLaw {
     text-align: left;
     font-weight: bold;
-}
+}*/

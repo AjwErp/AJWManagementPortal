@@ -20,35 +20,40 @@ namespace AJWManagementPortal.Areas.Account.Controllers
             _db = db;
 
         }
+        //GET---DailyMonthlyYearlyAuditAccountsReportsListRepository--Start--
         public IActionResult DailyMonthlyYearlyAuditAccountsReportsListRepository()
         {
             return View();
         }
+        //GET---DailyMonthlyYearlyAuditAccountsReportsListRepository--ended--
+        //POST---DailyMonthlyYearlyAuditAccountsReportsListRepository--Start--
+        //POST---DailyMonthlyYearlyAuditAccountsReportsListRepository--ended--
 
-        //Repository for Daily cash continues report list
-        public IActionResult DailyReportRepository()
-        {
-            return View();
-        }
-        //Repository for Daily cash continues report list
-        //Monthly Accounts report repository
-        public IActionResult MonthlyReportRepository()
-        {
-            return View();
-        }
-        //Monthly Accounts report repository
-        //Yearly report Repository List
-        public IActionResult YearlyReportRepository()
-        {
-            return View();
-        }
-        //Yearly report Repository List
 
-        //Yearly report Repository List
-        public IActionResult AccountsAuditReportsRepository()
-        {
-            return View();
-        }
-        //Yearly report Repository List
+        ////Repository for Daily cash continues report list
+        //public IActionResult DailyReportRepository()
+        //{
+        //    return View();
+        //}
+        ////Repository for Daily cash continues report list
+        ////Monthly Accounts report repository
+        //public IActionResult MonthlyReportRepository()
+        //{
+        //    return View();
+        //}
+        ////Monthly Accounts report repository
+        ////Yearly report Repository List
+        //public IActionResult YearlyReportRepository()
+        //{
+        //    return View();
+        //}
+        ////Yearly report Repository List
+
+        ////Yearly report Repository List
+        //public IActionResult AccountsAuditReportsRepository()
+        //{
+        //    return View();
+        //}
+        ////Yearly report Repository List
     }
 }

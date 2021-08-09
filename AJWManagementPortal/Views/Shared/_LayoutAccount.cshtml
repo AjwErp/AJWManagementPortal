@@ -61,7 +61,7 @@
             <div class="sidebar-header">
                 <div class="container">
                     @*<a asp-action="AccountDashboard" asp-controller="Account" asp-area="Account"><img src="~/Image/white.png" alt="logo"></a>*@
-                    <a style="font-size:20px;" class="navbar-brand text-info title" asp-action="AccountDashboard" asp-controller="Account" asp-area="Account"><img id="main-logo" style="height:36px;" src="~/Image/white.png">&nbsp;&nbsp;<span class="text-warning">@Localizer["AGRO"]</span><span class="text-info">@Localizer["INDUSTRY"]</span>  </a>
+                    <a style="font-size:20px;" class="navbar-brand text-info title" asp-action="Index" asp-controller="Home" asp-area="Home"><img id="main-logo" style="height:36px;" src="~/Image/white.png">&nbsp;&nbsp;<span class="text-warning">@Localizer["AGRO"]</span><span class="text-info">@Localizer["INDUSTRY"]</span>  </a>
 
                 </div>
             </div>
@@ -178,7 +178,7 @@
                         </div>
                         <div class="search-box pull-left">
                             <form action="#">
-                                <input type="text" name="search" id="mySearch" onkeyup="myFunction()" placeholder="@Localizer["Search for something ..."]" required>
+                                <input type="text" name="search" id="mySearch" onkeyup="myFunctionSearch()" placeholder="@Localizer["Search for something ..."]" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
@@ -195,21 +195,21 @@
                                 <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
                                     <span>2</span>
                                 </i>
-                                <div class="dropdown-menu bell-notify-box notify-box">
+                                <div class="dropdown-menu bell-notify-box notify-box bg-white">
                                     <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
                                     <div class="nofity-list">
+                                        <a href="#" class="notify-item">
+                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                            <div class="notify-text">
+                                                <p>Accounts Manager Daily Reports send to D.G.M Office </p>
+                                                <span>08:50 A.M || 01-08-2021</span>
+                                            </div>
+                                        </a>
                                         <a href="#" class="notify-item">
                                             <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
                                             <div class="notify-text">
                                                 <p>You have Changed Your Password</p>
                                                 <span>Just Now</span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
-                                            <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
                                             </div>
                                         </a>
                                     </div>
@@ -341,10 +341,175 @@
 
 @section Scripts{
     <script>
-            function myFunction() {
-                window.print();
+        function myFunctionSearch() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("menu");
+            li = ul.getElementsByTagName("li");
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+
+                }
             }
+        }
+
+        //------js for print fuction------------
+        function MyFunctionPrint() {
+            window.print();
+        }
+
+        //---------JS for Back To Top Button On Each Page------------------Start-------
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
         
     </script>
 
 }
+
+<style>
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+    /*-----these clases is for Background  Account Office----*/
+    .search-background {
+        background: url('../Image/dust_scratches.png');
+    }
+
+    .backgroundWhite {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .backgroundWhiteBorder {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+    }
+
+    .backgroundWhiteBorder10Padding {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .ajwfooter {
+        font-size: x-small;
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    .lang_btn {
+        font-family: "ProximaNova";
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        background-color: #C82333;
+        text-transform: uppercase;
+        margin-top: 1.7%;
+        text-decoration: none !important;
+        width: 65px;
+        text-align: center;
+        height: 39px;
+        border: solid 1px #C82333;
+    }
+    /*page print css----*/
+    .btn-theme {
+        background: #08818c;
+        color: #fff;
+    }
+
+    .btn {
+        font-family: arial;
+    }
+
+    .btn-print {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 1.33;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .PrintP {
+        margin-left: 985px;
+        position: absolute;
+        margin-top: -50px;
+    }
+
+    /*page print css----*/
+    *#button {
+        display: inline-block;
+        background-color: #FF9800;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
+
+    #button::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 50px;
+        color: #fff;
+    }
+
+    #button:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
+
+    #button:active {
+        background-color: #555;
+    }
+
+    #button.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #button {
+        margin: 30px;
+    }
+</style>

@@ -1,32 +1,16 @@
-﻿
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+@model AJWDailyPlanIO
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
 @{
     ViewData["Title"] = "AJWDailyPlanIO";
     Layout = "~/Views/Shared/_LayoutProduction.cshtml";
 }
 
-@*this code is for language transalator inject localizer--------------*@
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
-@model AJWDailyPlanIO
 
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
-
-
-<style>
-    .tabled {
-        position: center;
-        align-content: center;
-        text-align: center;
-        /*margin-left: -200px;*/
-    }
-
-    .signt {
-        position: center;
-        align-content: center;
-        text-align: center;
-        /*  margin-left: -120px;*/
-    }
-</style>
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <form class="" method="post" asp-action="AJWDailyPlanIO">
     <table class="tabled table table-bordered">
         <thead>
@@ -107,8 +91,31 @@
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
 
-@section Scripts{
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
+@*@section Scripts{
     <script>
     </script>
+}*@
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
 
-}
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+
+<style>
+    .tabled {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*margin-left: -200px;*/
+    }
+
+    .signt {
+        position: center;
+        align-content: center;
+        text-align: center;
+        /*  margin-left: -120px;*/
+    }
+</style>
+
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

@@ -34,11 +34,11 @@ namespace AJWManagementPortal.Areas.Account.Controllers
         //POST--ended---for All Daily Accounts Reports----- 
 
 
-        //GET- for index method
-        public IActionResult Index()
-        {
-            return View();
-        } 
+        ////GET- for index method
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //} 
         //ended--GET- for index method
         //POST- for index method
         //ended--POST- for index method

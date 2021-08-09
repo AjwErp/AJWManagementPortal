@@ -1,9 +1,6 @@
 ﻿
-
 @*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
-@*this code is for language transalator inject localizer--------------*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
 
 @{
     ViewData["Title"] = "AccountsPdfReports";
@@ -33,7 +30,7 @@
                 <br />
                 <table class="table table-bordered" id="DMBLBook">
                     <thead>
-                        <tr class="Subhdr smallfontHeading">
+                        <tr class="Subhdr SubH">            
                             <th>@Localizer["Action"] </th>
                             <th>@Localizer["Date"]</th>
                             <th>@Localizer["Title"]</th>
@@ -41,7 +38,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody smallfontHeading">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,8 +80,8 @@
                     </thead>
                     <tbody>
 
-                        <tr class="tabbody SubH">
-                            <td class="tabbody">
+                        <tr class="SubH">
+                            <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         @Localizer["Action"]
@@ -121,18 +118,14 @@
                     <thead>
 
                         <tr class="Subhdr SubH">
-
                             <th>@Localizer["Action"]</th>
-
                             <th>@Localizer["Date"]</th>
                             <th>@Localizer["Title"]</th>
-
                             <th>@Localizer["ID#"]</th>
-
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody SubH">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -174,7 +167,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody SubH">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -210,17 +203,14 @@
                 <table class="table table-bordered" id="APReport">
                     <thead>
                         <tr class="Subhdr SubH">
-
                             <th>@Localizer["Action"]</th>
-
                             <th>@Localizer["Date"]</th>
                             <th>@Localizer["Title"]</th>
-
                             <th>@Localizer["ID#"]</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody SubH">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -256,6 +246,12 @@
 
                @*Datatable and pagination for Account Office PDF Report*@
     <script>
+        $(document).ready(function () {
+            $('#DMBLBook').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+        //---------
         $(document).ready(function () {
             $('#DPReport').DataTable({
                 "sPaginationType": "full_numbers"
@@ -301,7 +297,11 @@
     font-size: large;
     text-align: right;
 }
-
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
 .actionbtn {
     width: 150px;
     text-align: center;
@@ -346,11 +346,7 @@
 .smallfontHeading {
     font-size: medium;
 }
-/* Css for Table Body on each page in Accounts----*/
-.tabbody {
-    text-align: center;
-    color: black;
-}
+
   /*---these clases is for Background------- */
     .search-background {
         background: url('../Image/dust_scratches.png');

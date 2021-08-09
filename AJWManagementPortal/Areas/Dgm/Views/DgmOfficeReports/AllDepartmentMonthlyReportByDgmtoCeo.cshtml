@@ -1,14 +1,15 @@
-﻿@*this code is for language transalator inject localizer--------------*@
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
 @{
     ViewData["Title"] = "AllDepartmentMonthlyReportByDgmtoCeo";
     Layout = "~/Views/Shared/_LayoutDgm.cshtml";
 }
 
 
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
-<style></style>
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <!-- Table with panel -->
 <body>
@@ -670,10 +671,17 @@
 </body>
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
     </script>
-
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+<style>
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

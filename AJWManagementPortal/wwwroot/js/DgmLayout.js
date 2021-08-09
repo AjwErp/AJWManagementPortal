@@ -21,50 +21,50 @@
 //}
 
 //---------JS for Back To Top Button On Each Page------------------Start-------
-var btn = $('#button');
+//var btn = $('#button');
 
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-    } else {
-        btn.removeClass('show');
-    }
-});
+//$(window).scroll(function () {
+//    if ($(window).scrollTop() > 300) {
+//        btn.addClass('show');
+//    } else {
+//        btn.removeClass('show');
+//    }
+//});
 
-btn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, '300');
-});
+//btn.on('click', function (e) {
+//    e.preventDefault();
+//    $('html, body').animate({ scrollTop: 0 }, '300');
+//});
 /*------------DgmAccountsDepartmentReportsList-----start-js----*/
 
 
 
-$(document).ready(function () {
-    $('#DARReport').DataTable({
-        "sPaginationType": "full_numbers"
-    });
-});
+//$(document).ready(function () {
+//    $('#DARReport').DataTable({
+//        "sPaginationType": "full_numbers"
+//    });
+//});
 
 
-        $(document).ready(function () {
-            $('#MARReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
+//        $(document).ready(function () {
+//            $('#MARReport').DataTable({
+//                "sPaginationType": "full_numbers"
+//            });
+//        });
 
 
-        $(document).ready(function () {
-            $('#YARReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
+//        $(document).ready(function () {
+//            $('#YARReport').DataTable({
+//                "sPaginationType": "full_numbers"
+//            });
+//        });
 
 
-        $(document).ready(function () {
-            $('#AARReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
+//        $(document).ready(function () {
+//            $('#AARReport').DataTable({
+//                "sPaginationType": "full_numbers"
+//            });
+//        });
 /*------------DgmAccountsDepartmentReportsList---ended---js----*/
 
 /*//--DGM Daily Plan List---------start-------*/
@@ -77,31 +77,31 @@ $(document).ready(function () {
 //---------------AJW  DGM Office Report- start--------------
 
 
-    $(document).ready(function () {
-            $('#DPReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
+    //$(document).ready(function () {
+    //        $('#DPReport').DataTable({
+    //            "sPaginationType": "full_numbers"
+    //        });
+    //    });
 
-        $(document).ready(function () {
-            $('#MPReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
-
-
-        $(document).ready(function () {
-            $('#YPReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
+    //    $(document).ready(function () {
+    //        $('#MPReport').DataTable({
+    //            "sPaginationType": "full_numbers"
+    //        });
+    //    });
 
 
-        $(document).ready(function () {
-            $('#APReport').DataTable({
-                "sPaginationType": "full_numbers"
-            });
-        });
+    //    $(document).ready(function () {
+    //        $('#YPReport').DataTable({
+    //            "sPaginationType": "full_numbers"
+    //        });
+    //    });
+
+
+    //    $(document).ready(function () {
+    //        $('#APReport').DataTable({
+    //            "sPaginationType": "full_numbers"
+    //        });
+    //    });
 //---------------AJW  DGM Office Report---ended--------------
 
         //--------------back to top----start-----------

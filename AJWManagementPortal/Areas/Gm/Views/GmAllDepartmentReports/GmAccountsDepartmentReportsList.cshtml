@@ -1,6 +1,7 @@
-﻿@*this code is for language transalator inject localizer--------------*@
+﻿
+@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
 
 @{
     ViewData["Title"] = "GmAccountsDepartmentReportsList";
@@ -8,7 +9,9 @@
 }
 
 
-<style></style>
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
+
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <div class="container-fluid backgroundWhiteBorder10Padding backgroundWhite">
@@ -21,14 +24,14 @@
 
             <form class="tabled col-sm-12">
                 <hr />
-               
-                               <div class="col-sm-12 text-center">
-                    <a class="titleAccountofficeReport" scope="col" colspan="10">@Localizer["Bank Check Approvel Voucher List-Account Office"]</a>
+
+                <div class="col-sm-12 text-center">
+                    <a class="TitleGmAccountReport" scope="col" colspan="10">@Localizer["Bank Check Approvel Voucher List-Account Office"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="BCVList">
                     <thead>
-                        <tr class="Subhdr smallfontHeading">
+                        <tr class="Subhdr SubH">
                             <th>@Localizer["Action"] </th>
                             <th>@Localizer["Date"]</th>
                             <th>@Localizer["Title"]</th>
@@ -36,7 +39,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody smallfontHeading">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,7 +67,7 @@
 
                 <hr />
                 <div class="col-sm-12 text-center">
-                    <a class="Title" colspan="10">@Localizer["Daily Accounts Reports Repository -Account Office"]</a>
+                    <a class="TitleGmAccountReport" colspan="10">@Localizer["Daily Accounts Reports Repository -Account Office"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="DARReport">
@@ -105,7 +108,7 @@
 
                 <hr />
                 <div class="col-sm-12 text-center">
-                    <a class="Title" colspan="10">@Localizer["Monthly Accounts Reports Repository - Account Office"]</a>
+                    <a class="TitleGmAccountReport" colspan="10">@Localizer["Monthly Accounts Reports Repository - Account Office"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="MARReport">
@@ -148,7 +151,7 @@
 
                 <hr />
                 <div class="col-sm-12 text-center">
-                    <a class="Title" colspan="10">@Localizer["Yearly Accounts Reports Repository -Account Office"]</a>
+                    <a class="TitleGmAccountReport" colspan="10">@Localizer["Yearly Accounts Reports Repository -Account Office"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="YARReport">
@@ -190,7 +193,7 @@
 
                 <hr />
                 <div class="col-sm-12 text-center">
-                    <a class="Title" colspan="10">@Localizer["Audit Accounts Reports Repository -Account Office"]</a>
+                    <a class="TitleGmAccountReport" colspan="10">@Localizer["Audit Accounts Reports Repository -Account Office"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="AARReport">
@@ -232,7 +235,10 @@
 </body>
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
+
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section scripts{
     <script>
         $(document).ready(function () {
@@ -241,5 +247,119 @@
             });
         });
 
+//----
+        $(document).ready(function () {
+            $('#DARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
+        //-----
+
+        $(document).ready(function () {
+            $('#MARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
+        //--------
+
+        $(document).ready(function () {
+            $('#YARReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+
     </script>
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+
+<style>
+    .TitleGmAccountReport {
+        color: white;
+        font-size: xx-large;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+        font-weight: bold;
+    }
+    .header {
+        overflow: hidden;
+        padding: 10px 10px;
+        font-size: 40px;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+    }
+
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+
+    .Titlelawbooklist {
+        color: white;
+        font-size: xx-large;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .Createbtn {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: large;
+        text-align: right;
+    }
+
+    .actionbtn {
+        width: 150px;
+        text-align: center;
+    }
+
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
+    /*
+    .titleAccountofficeReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }*/
+
+    .Subhdr {
+        color: white;
+        text-align: center;
+        background-color: slategrey;
+    }
+
+    .tabbody {
+        text-align: center;
+        color: black;
+    }
+
+    .lang_btn {
+        font-family: "ProximaNova";
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        background-color: #C82333;
+        text-transform: uppercase;
+        margin-top: 1.7%;
+        text-decoration: none !important;
+        width: 65px;
+        text-align: center;
+        height: 39px;
+        border: solid 1px #C82333;
+    }
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@

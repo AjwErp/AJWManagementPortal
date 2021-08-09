@@ -27,32 +27,6 @@ namespace AJWManagementPortal.Areas.Account.Controllers
         {
             return View();
         }
-        //action for Dashboard Page 
-        //action for Index Page 
-        public IActionResult Index()
-        {
-            return View();
-        }
-        //action for Index Page 
-        //action for Error Page 
-        public IActionResult Error()
-        {
-            return View();
-        }
-        //end error page action
-        //action for Calender Page 
-        public IActionResult Calender()
-        {
-            return View();
-        }
-        //end Calender page action
-        
-        public IActionResult Loading()
-        {
-            return View();
-        }
-
-  
-
+        //action for Dashboard Page      
     }
 }

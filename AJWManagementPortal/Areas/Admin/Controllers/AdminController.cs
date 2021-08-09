@@ -17,8 +17,6 @@ namespace AJWManagementPortal.Areas.Admin.Controllers
     //[Authorize(Roles = SD.ManagerUser)]
     public class AdminController : Controller
     {
-
-
         //here we create constrauctor of DB class
         private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _iwebhost;
@@ -35,12 +33,7 @@ namespace AJWManagementPortal.Areas.Admin.Controllers
         {
             return View();
         }
-      
-        //GET for Testing page
-        public IActionResult Test()
-        {
-            return View();
-        }
+   
         //GET for AllDepartment action Page
         public IActionResult AllDepartment()
         {

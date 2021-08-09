@@ -1,5 +1,4 @@
 ﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
-@*this code is for language transalator inject localizer--------------*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
 @{
     ViewData["Title"] = "GeneralLedgerBookList";
@@ -17,7 +16,7 @@
                 <a class="logo font-weight-bold font-weight-bolder">@Localizer["General Ledger Book Reports List"]</a>
             </div>
             @*----------start-----general ledger  report lisst------------------*@
-            <form class="tabled col-sm-12">
+            <form class="col-sm-12">
                 <hr />
                 <div class="col-sm-12 Createbtn">
                     <a type="button" class="btn btn-primary" asp-area="Account" asp-controller="GeneralLedger" asp-action="DailyGeneralLedgerBook"><i class="fas fa-plus"> @Localizer["Create New Daily Industry Internal Account-General Ledger"]</i> </a>
@@ -37,7 +36,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody SubH">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,7 +58,6 @@
                 </table>
 
                 @*------------------------ended---------------------------- Table for Daily GeneralLedgerBook List----------------------------------------------------------*@
-
                 @*------------------------start---------------------------- Table for Monthly GeneralLedgerBook List----------------------------------------------------------*@
                 <hr />
                 <div class="col-sm-12  Createbtn">
@@ -80,7 +78,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody SubH">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -100,10 +98,7 @@
                         </tr>
                     </tbody>
                 </table>
-
                 @*------------------------ended---------------------------- Table for Monthly GeneralLedgerBook List----------------------------------------------------------*@
-
-
                 @*------------------------start---------------------------- Table for Yearly GeneralLedgerBook List----------------------------------------------------------*@
                 <hr />
                 <div class="col-sm-12 Createbtn">
@@ -124,7 +119,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="tabbody SubH">
+                        <tr class="SubH">
                             <td class="actionbtn">
                                 <div class="btn-group">
                                     <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -180,8 +175,17 @@
 
 @*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 <style>
+
+
     body {
         font-family: 'Jameel Noori Nastaleeq';
+    }
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
     }
     /*-----these clases is for Background  Account Office----*/
     .search-background {
@@ -202,7 +206,6 @@
         margin-bottom: 30px;
         border: 1px solid #ddd;
     }
-
     .backgroundWhiteBorder10Padding {
         background-color: white;
         padding: 10px;
@@ -233,6 +236,11 @@
         border: 1px solid #ddd;
         table-layout: fixed;
         width: 100%
+    }
+    .Subhdr {
+        color: white;
+        text-align: center;
+        background-color: slategrey;
     }
     /*  Css for small Size of Content----*/
     .SubH {

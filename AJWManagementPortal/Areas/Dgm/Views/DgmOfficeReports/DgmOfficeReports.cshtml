@@ -1,20 +1,22 @@
-﻿@*this code is for language transalator inject localizer--------------*@
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
-@*this code is for language transalator inject localizer--------------*@
 
 @{
     ViewData["Title"] = "DgmOfficeReports";
     Layout = "~/Views/Shared/_LayoutDgm.cshtml";
 }
 
-<style></style>
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
+
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 
 <br />
 <body>
-    <div class="container-fluid backgroundWhiteBorder10Padding DgmofficeReport">
+    <div class="container-fluid backgroundWhiteBorder ">
         <div class="row">
             <div class="header col-sm-12">
-      
+
                 <a class="logo font-weight-bold font-weight-bolder">@Localizer["All Reports By D.G.M Office To C.E.O Office"]</a>
             </div>
 
@@ -26,8 +28,8 @@
                     <a type="button" class="btn btn-primary" asp-area="Dgm" asp-controller="DgmOfficeReports" asp-action="AllDepartmentDailyReportByDgmtoCeo"><i class="fas fa-plus"> @Localizer["Create New Daily Report By D.G.M To C.E.O"]</i> </a>
                 </div>
                 <br />
-                <div class="col-sm-12">
-                    <a class="titleDgmofficeReport" scope="col" colspan="10">@Localizer["All Department Daily Reports By D.G.M To C.E.O List"]</a>
+                <div class="col-sm-12 text-center">
+                    <a class="TitleDgmOfficeReport" scope="col" colspan="10">@Localizer["All Department Daily Reports By D.G.M To C.E.O List"]</a>
                 </div>
                 <br />
 
@@ -72,8 +74,8 @@
                     <a type="button" class="btn btn-primary" asp-area="Dgm" asp-controller="DgmOfficeReports" asp-action="AllDepartmentMonthlyReportByDgmtoCeo"><i class="fas fa-plus"> @Localizer["Create New All Department Monthly Report"]</i> </a>
                 </div>
                 <br />
-                <div class="col-sm-12">
-                    <a class=" titleDgmofficeReport" scope="col" colspan="10">@Localizer["All Department Monthly Report By D.G.M To C.E.O Office List"]</a>
+                <div class="col-sm-12 text-center">
+                    <a class=" TitleDgmOfficeReport" scope="col" colspan="10">@Localizer["All Department Monthly Report By D.G.M To C.E.O Office List"]</a>
                 </div>
                 <br />
 
@@ -119,7 +121,7 @@
                 </div>
                 <br />
                 <div class="col-sm-12 text-center">
-                    <a class="text-black titleDgmofficeReport" colspan="10">@Localizer["All Department Yearly Report By D.G.M To C.E.O Office List"]</a>
+                    <a class="TitleDgmOfficeReport" colspan="10">@Localizer["All Department Yearly Report By D.G.M To C.E.O Office List"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="YPReport">
@@ -161,7 +163,7 @@
                 </div>
                 <br />
                 <div class="col-sm-12 text-center">
-                    <a class=" text-black titleDgmofficeReport" colspan="10">@Localizer["D.G.M Office Audit Report List"]</a>
+                    <a class="TitleDgmOfficeReport" colspan="10">@Localizer["D.G.M Office Audit Report List"]</a>
                 </div>
                 <br />
                 <table class="table table-bordered" id="APReport">
@@ -202,36 +204,150 @@
 <a id="button"></a>
 
 
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section scripts{
-<script>
-    $(document).ready(function () {
-        $('#DPReport').DataTable({
-            "sPaginationType": "full_numbers"
+    <script>
+        $(document).ready(function () {
+            $('#DPReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
         });
-    });
 
-    $(document).ready(function () {
-        $('#MPReport').DataTable({
-            "sPaginationType": "full_numbers"
+        $(document).ready(function () {
+            $('#MPReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
         });
-    });
 
 
-    $(document).ready(function () {
-        $('#YPReport').DataTable({
-            "sPaginationType": "full_numbers"
+        $(document).ready(function () {
+            $('#YPReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
         });
-    });
 
 
-    $(document).ready(function () {
-        $('#APReport').DataTable({
-            "sPaginationType": "full_numbers"
+        $(document).ready(function () {
+            $('#APReport').DataTable({
+                "sPaginationType": "full_numbers"
+            });
         });
-    });
-</script>
- }
+    </script>
+}
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
+
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
+<style>
+    .TitleDgmOfficeReport {
+        color: white;
+        font-size: xx-large;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+        font-weight: bold;
+    }
+   
+
+    .table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+        table-layout: fixed;
+        width: 100%
+    }
+
+    .DgmLUBook {
+        text-align: right;
+        text-align: justify;
+        direction: rtl;
+    }
+
+    .titleLaw {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .titleDgmRepositoryReport {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    /*page print css----*/
+    .btn-theme {
+        background: #08818c;
+        color: #fff;
+    }
+
+    .btn {
+        font-family: arial;
+    }
+
+    .btn-print {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 1.33;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .PrintP {
+        margin-left: 985px;
+        position: absolute;
+        margin-top: -50px;
+    }
+
+    /*page print css----*/
+
+    .header {
+        overflow: hidden;
+        padding: 10px 10px;
+        font-size: 40px;
+        font-family: 'Jameel Noori Nastaleeq';
+        text-align: center;
+    }
+
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+
+    .Createbtn {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: large;
+        text-align: right;
+    }
+
+    .actionbtn {
+        width: 150px;
+        text-align: center;
+    }
+
+    .SubH {
+        text-align: center;
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: medium;
+    }
 
 
 
+    .Subhdr {
+        color: white;
+        text-align: center;
+        background-color: slategrey;
+    }
+
+    .tabbody {
+        text-align: center;
+        color: black;
+    }
+</style>
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@
 

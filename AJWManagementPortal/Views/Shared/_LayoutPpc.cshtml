@@ -61,7 +61,7 @@
             <div class="sidebar-header">
                 <div class="container">
                     @*<a asp-action="AccountDashboard" asp-controller="Account" asp-area="Account"><img src="~/Image/white.png" alt="logo"></a>*@
-                    <a style="font-size:20px;" class="navbar-brand text-info title" asp-action="PpcDashboard" asp-controller="Ppc" asp-area="Ppc"><img id="main-logo" style="height:36px;" src="~/Image/white.png">&nbsp;&nbsp;<span class="text-warning">@Localizer["AGRO"]</span><span class="text-info">@Localizer["INDUSTRY"]</span>  </a>
+                    <a style="font-size:20px;" class="navbar-brand text-info title" asp-action="Index" asp-controller="Home" asp-area="Home"><img id="main-logo" style="height:36px;" src="~/Image/white.png">&nbsp;&nbsp;<span class="text-warning">@Localizer["AGRO"]</span><span class="text-info">@Localizer["INDUSTRY"]</span>  </a>
                 </div>
             </div>
             <div class="main-menu">
@@ -72,11 +72,11 @@
                                 <a asp-action="PpcDashboard" asp-controller="Ppc" asp-area="Ppc" aria-expanded="true"><h4><span class="text-warning">@Localizer["PPC"]</span><br /><span>@Localizer["Dashboard"]</span></h4></a>
                             </li>
                             @*<li class="search-box border-top">
-                                <form action="#">
-                                    <input type="text" name="search" id="mySearch" onkeyup="myFunction()" placeholder="@Localizer["Search for something..."]" required>
-                                    <i class="ti-search"></i>
-                                </form>
-                            </li>*@
+                                    <form action="#">
+                                        <input type="text" name="search" id="mySearch" onkeyup="myFunction()" placeholder="@Localizer["Search for something..."]" required>
+                                        <i class="ti-search"></i>
+                                    </form>
+                                </li>*@
                             <li class="border-top border-bottom">
                                 <a asp-controller="Ppc" asp-area="Ppc" asp-action="PpcDashboard" aria-expanded="true">
                                     <i class="ti-layout-sidebar-left"></i><span>
@@ -291,6 +291,178 @@
 </body>
 </html>
 
-<script>
- 
-</script>
+
+@section Scripts{
+    <script>
+        function myFunctionSearch() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("menu");
+            li = ul.getElementsByTagName("li");
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+
+                }
+            }
+        }
+        //------js for print fuction------------
+        function MyFunctionPrint() {
+            window.print();
+        }
+        //---------JS for Back To Top Button On Each Page------------------Start-------
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+
+    </script>
+
+}
+
+<style>
+    .lang_btn {
+        font-family: "ProximaNova";
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        background-color: #C82333;
+        text-transform: uppercase;
+        margin-top: 1.7%;
+        text-decoration: none !important;
+        width: 65px;
+        text-align: center;
+        height: 39px;
+        border: solid 1px #C82333;
+    }
+
+    body {
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    body {
+        font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+    }
+    /*  Css for Table of Each in Accounts----*/
+    .table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+        table-layout: fixed;
+        width: 100%
+    }
+
+    .mainul {
+        font-family: 'Jameel Noori Nastaleeq';
+        font-size: large;
+        margin-bottom: 220px;
+    }
+    /*  Css for Table of each in Accounts----*/
+    /*table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #ddd;
+    }*/
+    /*  Css for TH/TD of Each Table in Accounts----*/
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+    /*//--DGM Layout page css--------start--------*/
+
+    .ajwfooter {
+        font-size: x-small;
+        font-family: 'Jameel Noori Nastaleeq';
+    }
+
+    /*page print css----*/
+    .btn-theme {
+        background: #08818c;
+        color: #fff;
+    }
+
+    .btn {
+        font-family: arial;
+    }
+
+    .btn-print {
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 1.33;
+        vertical-align: middle;
+        float: left;
+    }
+
+    .PrintP {
+        margin-left: 985px;
+        position: absolute;
+        margin-top: -45px;
+    }
+
+    /*page print css----*/
+    /*-----csss for Back To Top*/
+    #button {
+        display: inline-block;
+        background-color: #FF9800;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
+
+        #button::after {
+            content: "\f077";
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 1em;
+            line-height: 50px;
+            color: #fff;
+        }
+
+        #button:hover {
+            cursor: pointer;
+            background-color: #333;
+        }
+
+        #button:active {
+            background-color: #555;
+        }
+
+        #button.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    #button {
+        margin: 30px;
+    }
+</style>

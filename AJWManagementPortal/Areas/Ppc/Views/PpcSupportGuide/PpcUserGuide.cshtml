@@ -1,18 +1,16 @@
-﻿
+﻿@*----------Header Code for this Page--------------------------------Start-------------------Header------------------*@
+@*---Language Tranlator--Localizer*@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
 @{
     ViewData["Title"] = "PpcUserGuide";
     Layout = "~/Views/Shared/_LayoutPpc.cshtml";
 }
 
 
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
-@{
-    ViewData["Title"] = "DesignUserGuide";
-    Layout = "~/Views/Shared/_LayoutDesign.cshtml";
-}
+@*----------Header Code for this Page--------------------------------Ended-------------------Header------------------*@
 
-
-
+@*----------Body Code for this Page----------------------------------Start---------------------Body----------------*@
 <br />
 <body>
     <form class="tabled">
@@ -232,14 +230,17 @@
 
 <!-- back to top button-->
 <a id="button"></a>
-<!-- back to top button-->
+
+@*----------Body Code for this Page----------------------------------Ended---------------------Body----------------*@
+
+@*----------JS for this Page-----------------------------------------Start---------------------JS----------------*@
 @section Scripts{
     <script>
     </script>
-
 }
+@*----------JS for this Page-----------------------------------------Ended----------------------JS---------------*@
 
-
+@*----------CSS for this Page----------------------------------------Start----------------------CSS---------------*@
 
 <style>
     .PpcLUBook {
@@ -279,3 +280,4 @@
     /*page print css----*/
 </style>
 
+@*----------CSS for this Page----------------------------------------Ended-----------------------CSS--------------*@
