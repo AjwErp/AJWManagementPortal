@@ -48,7 +48,6 @@ namespace AJWManagementPortal
             services.AddSingleton<IEmailSender, EmailSender>();
             //services.Configure<EmailOptions>(Configuration);
 
-
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
             //here we add for language translation add code-------------------------------
