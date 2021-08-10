@@ -9217,19 +9217,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\A J W\\.nuget\\packages\\": {}
+    "C:\\Users\\Khan computers\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\A J W\\source\\repos\\AJWManagementPortal\\AJWManagementPortal\\AJWManagementPortal.csproj",
+      "projectUniqueName": "C:\\Users\\Khan computers\\Source\\Repos\\AjwErp\\AJWManagementPortal\\AJWManagementPortal\\AJWManagementPortal.csproj",
       "projectName": "AJWManagementPortal",
-      "projectPath": "C:\\Users\\A J W\\source\\repos\\AJWManagementPortal\\AJWManagementPortal\\AJWManagementPortal.csproj",
-      "packagesPath": "C:\\Users\\A J W\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\A J W\\source\\repos\\AJWManagementPortal\\AJWManagementPortal\\obj\\",
+      "projectPath": "C:\\Users\\Khan computers\\Source\\Repos\\AjwErp\\AJWManagementPortal\\AJWManagementPortal\\AJWManagementPortal.csproj",
+      "packagesPath": "C:\\Users\\Khan computers\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Khan computers\\Source\\Repos\\AjwErp\\AJWManagementPortal\\AJWManagementPortal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\A J W\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Khan computers\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9312,12 +9312,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.13, 3.1.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9326,7 +9320,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
